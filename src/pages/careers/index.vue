@@ -2,11 +2,7 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/careers/bg.png" alt="" srcset="" class="w-full">
-<<<<<<< HEAD
       <div class="bg-[#072766] pl-14 pr-10 pt-30 text-white absolute top-29 w-120 left-50 ">
-=======
-      <div class="bg-[#072766] pl-14 pr-20 pt-30 text-white absolute top-29 w-110 left-50 ">
->>>>>>> origin/main
         <p class="text-6xl font-bold mb-8">{{ t('pages.careers.banner.title') }}</p>
         <p class="text-4xl opacity-60">{{ t('pages.careers.banner.title1') }}</p>
         <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-18"></div>
@@ -38,7 +34,6 @@
         <span class="text-[#001949] text-4xl font-bold">{{ t('pages.careers.desc2') }}</span>
       </div>
       <div class="px-10 py-16 grid grid-cols-3 gap-4">
-<<<<<<< HEAD
         <div class="bg-white p-10 flex flex-col" v-for="item in list" :key="item.id">
           <p class="text-[#9F8570] text-4xl font-bold"> {{ item.jobTitle }}</p>
           <p class="text-2xl text-[#072867] my-10 flex-1 " v-html="item.abstract">
@@ -46,14 +41,6 @@
           </p>
           <div class="flex items-center justify-between gap-4">
             <p class="text-2xl text-[#072867] opacity-60 line-clamp-1 "> {{ item.workPlace }}</p>
-=======
-        <div class="bg-white p-10 flex flex-col" v-for="item in 11" :key="item">
-          <p class="text-[#9F8570] text-4xl font-bold"> 市场营销助理</p>
-          <p class="text-2xl text-[#072867] my-10 flex-1">专业视频内容制作与管理 <br />专业营销材料设计与制作<br /> 市场活动全流程支持
-            <br />新媒体运营支持与市场洞察</p>
-          <div class="flex items-center justify-between">
-            <p class="text-2xl text-[#072867] opacity-60">中国香港</p>
->>>>>>> origin/main
             <div class="flex items-center gap-4  cursor-pointer">
               <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                 <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +59,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-<<<<<<< HEAD
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
 interface Job {
@@ -88,8 +74,6 @@ const { data: list } = useCustomApiWithAutoRefresh<Job[]>(() => api.get({
 
 }))
 
-=======
->>>>>>> origin/main
 
 </script>
 

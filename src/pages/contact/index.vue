@@ -2,11 +2,7 @@
   <div>
     <div class="relative">
       <img src="@/assets/images/contact/bg.png" alt="" srcset="" class="w-full">
-<<<<<<< HEAD
       <div class="bg-[#072766] pl-14 pr-10 pt-30 text-white absolute top-30 w-120 left-38">
-=======
-      <div class="bg-[#072766] pl-14 pr-20 pt-30 text-white absolute top-30 w-110 left-38">
->>>>>>> origin/main
         <p class="text-6xl font-bold mb-4">{{ t('pages.contact.banner.title') }}</p>
         <p class="text-4xl opacity-60">{{ t('pages.contact.banner.title1') }}</p>
         <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-24"></div>

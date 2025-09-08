@@ -20,39 +20,22 @@
       <div class="grid grid-cols-2 gap-4">
         <div class="bg-[#FFFFFF] text-center py-10">
           <p class="text-[36px] font-bold text-[#9F8570] leading-20">{{ t('pages.trust.focused.title2') }}</p>
-<<<<<<< HEAD
           <p class="text-[#082867] text-xl">{{ t('pages.trust.focused.desc2') }}<br />{{
-=======
-          <p class="text-[#082867] text-[23px]">{{ t('pages.trust.focused.desc2') }}<br />{{
->>>>>>> origin/main
             t('pages.trust.focused.desc3') }}</p>
         </div>
         <div class="bg-[#FFFFFF] text-center py-10">
           <p class="text-[36px] font-bold text-[#9F8570] leading-20">{{ t('pages.trust.focused.title3') }}</p>
-<<<<<<< HEAD
           <p class="text-[#082867] text-xl">{{ t('pages.trust.focused.desc4') }}<br />{{
             t('pages.trust.focused.desc5') }}</p>
         </div>
         <div class="bg-[#FFFFFF] text-center p-10">
           <p class="text-[36px] font-bold text-[#9F8570] leading-20">{{ t('pages.trust.focused.title4') }}</p>
           <p class="text-[#082867] text-xl">{{ t('pages.trust.focused.desc6') }}<br />{{
-=======
-          <p class="text-[#082867] text-[23px]">{{ t('pages.trust.focused.desc4') }}<br />{{
-            t('pages.trust.focused.desc5') }}</p>
-        </div>
-        <div class="bg-[#FFFFFF] text-center py-10">
-          <p class="text-[36px] font-bold text-[#9F8570] leading-20">{{ t('pages.trust.focused.title4') }}</p>
-          <p class="text-[#082867] text-[23px]">{{ t('pages.trust.focused.desc6') }}<br />{{
->>>>>>> origin/main
             t('pages.trust.focused.desc7') }}</p>
         </div>
         <div class="bg-[#FFFFFF] text-center py-10">
           <p class="text-[36px] font-bold text-[#9F8570] leading-20">{{ t('pages.trust.focused.title5') }}</p>
-<<<<<<< HEAD
           <p class="text-[#082867] text-xl">{{ t('pages.trust.focused.desc8') }}<br />{{
-=======
-          <p class="text-[#082867] text-[23px]">{{ t('pages.trust.focused.desc8') }}<br />{{
->>>>>>> origin/main
             t('pages.trust.focused.desc9') }}</p>
         </div>
       </div>

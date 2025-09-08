@@ -45,7 +45,6 @@
         <span class="text-[#001949] text-4xl font-bold">{{ t('pages.business.investment.title') }}</span>
       </div>
     </div>
-<<<<<<< HEAD
     <div class="bg-[#EAF0F8] pl-40  py-10 flex items-center gap-20">
       <img src="@/assets/images/strategy/business/image.png" alt="" srcset="" class="w-auto h-91">
       <div class="text-[#072867]">
@@ -74,36 +73,6 @@
         <p>
           <span class="text-[22px] font-bold ">{{ t('pages.business.investment.desc13') }}</span>
           <span class="text-xl">{{ t('pages.business.investment.desc14') }}</span>
-=======
-    <div class="bg-[#EAF0F8] pl-50 pr-34 py-10 flex items-center gap-20">
-      <img src="@/assets/images/strategy/business/image.png" alt="" srcset="" class="w-auto h-91">
-      <div class="text-[#072867]">
-        <p class="text-[#9F8570] text-[32px] font-bold">{{ t('pages.business.investment.title2') }}</p>
-        <p class="text-[23px] ">{{ t('pages.business.investment.desc2') }}</p>
-        <p class="text-[#9F8570] text-[32px] font-bold mt-8">{{ t('pages.business.investment.title3') }}</p>
-        <p class="text-[23px] ">{{ t('pages.business.investment.desc3') }}</p>
-        <p class="text-[23px] ">{{ t('pages.business.investment.desc4') }}</p>
-        <p class="text-[#9F8570] text-[32px] font-bold mt-8">{{ t('pages.business.investment.title4') }}</p>
-        <p>
-          <span class="text-[26px] font-bold ">{{ t('pages.business.investment.desc5') }}</span>
-          <span class="text-[23px] ">{{ t('pages.business.investment.desc6') }}</span>
-        </p>
-        <p>
-          <span class="text-[26px] font-bold ">{{ t('pages.business.investment.desc7') }}</span>
-          <span class="text-[23px] ">{{ t('pages.business.investment.desc8') }}</span>
-        </p>
-        <p>
-          <span class="text-[26px] font-bold ">{{ t('pages.business.investment.desc9') }}</span>
-          <span class="text-[23px] ">{{ t('pages.business.investment.desc10') }}</span>
-        </p>
-        <p>
-          <span class="text-[26px] font-bold ">{{ t('pages.business.investment.desc11') }}</span>
-          <span class="text-[23px] ">{{ t('pages.business.investment.desc12') }}</span>
-        </p>
-        <p>
-          <span class="text-[26px] font-bold ">{{ t('pages.business.investment.desc13') }}</span>
-          <span class="text-[23px] ">{{ t('pages.business.investment.desc14') }}</span>
->>>>>>> origin/main
         </p>
 
       </div>
