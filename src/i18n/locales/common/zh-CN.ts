@@ -12,24 +12,23 @@ export default {
   nav: {
     home: '首页',
     strategy: '投资策略',
-    insights: '洞察研究',
+    insights: '研究与洞察',
     news: '新闻中心',
     careers: '招贤纳士',
     about: '关于拔萃',
     contact: '全球办公室',
     // 投资策略子菜单
-    office: '家族办公室',
+    office: '优先劣后分级固定收益类基金系列',
     EAM: 'EAM',
-    trust: '海外家族信托',
-    business: '保险经纪个人业务',
-    company: '保险经纪公司业务',
-    planning: '身份规划',
-    services: '公司秘书服务',
-    other: '其他增值服务',
+    trust: '另类固收基金',
+    business: '母基金系列',
+    company: '顶级专项基金',
+    planning: '私募股权投资',
+
     // 关于拔萃子菜单
-    proposition: '核心价值主张',
+    proposition: '资质与合规',
     team: '管理团队',
-    value: '资质与合规',
+    value: '拔萃慈善基金会',
     license: '牌照',
   },
   footer: {

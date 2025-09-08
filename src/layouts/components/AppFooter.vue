@@ -26,7 +26,7 @@
         <!-- 免责声明 -->
         <div class="flex justify-center items-center flex-col">
           <p @click="showDisclaimer"
-            class="font-bold cursor-pointer w-54 text-[#031E4F]  text-center leading-relaxed border-l-4 border-[#031E4F] border-r-4 text-2xl mb-4">
+            class="cursor-pointer w-54 text-[#031E4F]  text-center leading-relaxed border-l-3 border-[#031E4F] border-r-3 text-xl mb-4">
             {{ t('footer.btn') }}
           </p>
           <p class="w-full text-center  text-[#42526e] leading-relaxed">

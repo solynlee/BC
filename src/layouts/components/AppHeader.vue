@@ -1,10 +1,10 @@
 <template>
-  <header class="relative bg-[#001a48]">
-    <div class="flex justify-between items-center  px-14 py-8 ">
-      <img src="@/assets/images/header/logo.png" alt="logo" class="h-12 w-auto">
+  <header id="page-top" class="relative bg-[#001a48]">
+    <div class="flex justify-between items-center  px-10 py-8 ">
+      <img src="@/assets/images/header/logo.png" alt="logo" class="h-16 w-auto">
       <img src="@/assets/images/header/title.png" alt="logo" class="h-12 w-auto">
     </div>
-    <div class="bg-[#072867] flex justify-between  px-14 items-center">
+    <div class="bg-[#072867] flex justify-between  px-10 items-center">
       <nav class="desktop-nav flex items-center  relative">
         <CustomMenu :key="activeMenuItem" :default-active="activeMenuItem" :mapped-active-menu="mappedActiveMenu"
           mode="horizontal" background-color="#072867" text-color="#506485" active-text-color="#ffffff"
@@ -254,7 +254,6 @@ const navItems = [
   },
   { path: '/insights', label: 'nav.insights' },
   { path: '/news', label: 'nav.news' },
-  { path: '/careers', label: 'nav.careers' },
   {
     path: '/about',
     label: 'nav.about',
@@ -262,9 +261,10 @@ const navItems = [
       { path: '/about/proposition', label: 'nav.proposition' },
       { path: '/about/team', label: 'nav.team' },
       { path: '/about/value', label: 'nav.value' },
-      { path: '/about/licenses', label: 'nav.license' }
+      // { path: '/about/licenses', label: 'nav.license' }
     ]
   },
+  { path: '/careers', label: 'nav.careers' },
   { path: '/contact', label: 'nav.contact' }
 ]
 

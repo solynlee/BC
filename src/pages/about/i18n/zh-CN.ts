@@ -7,6 +7,8 @@ export default {
         title1: 'About us',
         desc: '勤劳朴实  厚德载福',
         desc2: '出于其类  拔乎其萃',
+        desc3: '',
+        desc4: '',
       },
       desc: `在拔萃资本，我们以"合规守正、以人为本、长期共赢、持续创新"为核心价值观，致力于成为全球客户最值得信赖的财富伙伴。十二年来，这一文化理念已融入我们的每一项决策、每一次服务。`,
       tab: {
@@ -32,7 +34,7 @@ export default {
       },
       honors: `荣誉奖项`
     },
-    proposition: {
+    licenses: {
       title: '核心价值主张',
       title1: 'Core Value Proposition',
       subtitle: '德行天下，才萃八方',
@@ -83,9 +85,9 @@ export default {
       title: '资质与合规',
       title1: 'Professional Qualifications and Compliance',
       desc: `拔萃慈善基金会获香港税务局正式批复！`,
-      desc2: `我们扎根香港，致力服务自闭症、抑郁症及ADHD等特殊青少年群体。通过提供经济援助（筑梦基金）、专业支持网络及心理关怀，点亮困境生命。获批是荣誉，更是责任。诚邀您加入【微光计划】，成为“光明合伙人”，共筑希望之路，见证生命向阳而生！！`,
+      desc2: `我们扎根香港，致力服务自闭症、抑郁症及ADHD等特殊青少年群体。通过提供经济援助（筑梦基金）、专业支持网络及心理关怀，点亮困境生命。获批是荣誉，更是责任。诚邀您加入【微光计划】，成为“光明合伙人”，共筑希望之路，见证生命向阳而生！`,
     },
-    licenses: {
+    proposition: {
       title: '拔萃财富集团公司及牌照',
       title1: 'DC Wealth Group Subsidiary Corporation & Licenses',
       desc: `拔萃资本始终以合规运营和专业管理为核心，严格遵守全球金融市场的法律法规和监管要求，致力于为客户提供安全、透明、高效的财富管理服务。`,

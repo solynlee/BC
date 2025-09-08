@@ -1,165 +1,126 @@
 export default {
   pages: {
     about: {
-      title: 'About DeCui',
-      btn: 'More',
-      coreValue: {
-        title: 'Core Value Proposition',
-        subtitle: 'Virtue in the World, Talent in all Directions.',
-        desc: `DC Wealth Group combines unparalleled expertise with a global strategic vision to deliver comprehensive, multi-dimensional wealth management solutions for high-net-worth individuals, families, and enterprises. Co-founded by founding shareholders of Alibaba Group, 3J Investment Group Co., Ltd., and seasoned financial professionals from Mainland China and Hong Kong, we operate at the forefront of multi-family office services. Guided by our mission to "Safeguard Wealth, Perpetuate Legacy", we provide bespoke, high-end wealth management services.`,
-        desc2: '',
-        desc3: '',
-        decs4: ''
+      title: 'About us',
+      banner: {
+        title: 'About us',
+        title1: '',
+        desc: `Diligent and Prudent, `,
+        desc2: 'Standing Out from the Rest,',
+        desc3: 'Virtue Bears Blessings.',
+        desc4: 'Rising Above the Common.',
       },
-      team: {
-        title: 'Team',
-        desc: `The core management team of DC Wealth Group brings together seasoned leaders from the world's premier financial institutions, insurance giants, and century-old family offices. With an average of 15+ years of industry experience, they harness global expertise to architect deeply customized wealth management solutions for high-net-worth clients.`,
-        desc2: ''
+      desc: `In BC Capital, our core values—"Compliance & Integrity, People-Centric, Long-Term Shared Success, Continuous Innovation"—guide our mission to be the world's most trusted wealth partner. For the past twelve years, this cultural ethos has infused every decision we make and every service we deliver.`,
+      tab: {
+        tab1: `Corporate Culture`,
+        tab2: `Team`,
+        tab3: `Credentials and Compliance`,
+        tab4: `BC Philanthropic Foundation`
       },
-      compliance: {
-        title: 'Professional Qualifications and Compliance Framework',
-        desc: 'DC Wealth Group (DC Group) consistently adheres to the core principle of compliant operations, strictly following relevant laws and regulations in Hong Kong and the international financial services industry. As a licensed institution, we are committed to providing clients with secure, transparent, and efficient wealth management services through our outstanding compliance management system and experienced professional team. ',
-        licenses: [
-          {
-            name: 'Wealth Management',
-            label: 'SFC License',
-            subLabel: 'Type 1, 4, 9 Licenses',
-            desc: 'Assisting Market Analysis'
-          },
-          {
-            name: 'Trust Services',
-            label: 'Hong Kong Trust License',
-            subLabel: 'Registered with the Companies Registry',
-            desc: 'Family Wealth Distribution'
-          },
-          {
-            name: 'Insurance Brokerage Services',
-            label: 'Hong Kong Insurance Broker License',
-            subLabel: '(Brokerage Agency Business License)',
-            desc: 'Securing Optimal Benefits'
-          }
-        ]
+      culture: {
+        title: 'Brand Culture',
+        desc1: `Compliance & Integrity`,
+        content1: `Creating value within boundaries, earning `,
+        content2: `trust above thresholds`,
+        desc2: `People-Centric`,
+        content3: `Empowering professionals, `,
+        content4: `safeguarding legacies`,
+        desc3: `Long-Term Shared Success`,
+        content5: `Time is the ultimate risk `,
+        content6: `manager,shared success the deepest bond`,
+        desc4: `Continuous Innovation`,
+        content7: `Venturing boldly with`,
+        content8: `principled caution`,
       },
-      licenses: {
-        title: 'DC Capital Subsidiary Corporation & Licenses',
-        desc: 'DC Wealth Group (DC Group) has DC Wealth Management (HK) Limited, DC Insurance Consulting Limited, and China Hong Kong Wealth Management Limited, DC Trust Asia Limited, DC Fiduciary Services Limited.'
-      }
+      honors: `Honors and Awards`
     },
-    proposition: {
-      title: 'Core Value Proposition',
-      title1: '',
-      subtitle: 'Virtue in the World, Talent in all Directions',
-      intro: `DC Wealth Group combines unparalleled expertise with a global strategic vision to deliver comprehensive, multi-dimensional wealth management solutions for high-net-worth individuals, families, and enterprises. Co-founded by founding shareholders of Alibaba Group, 3J Investment Group Co., Ltd., and seasoned financial professionals from Mainland China and Hong Kong, we operate at the forefront of multi-family office services. Guided by our mission to "Safeguard Wealth, Perpetuate Legacy", we provide bespoke, high-end wealth management services.`,
+    licenses: {
+      title: '核心价值主张',
+      title1: 'Core Value Proposition',
+      subtitle: '德行天下，才萃八方',
+      intro: `拔萃财富集团以卓越的专业能力和全球化的战略视野，致力于为高净值个人、家族及企业打造全方位、多元化的财富管理方案。由阿里巴巴集团部分创始股东、三捷投资集团有限公司及中港两地资深金融专业人士联合创立，拔萃财富以多家族办公室业务为核心，秉承“保障财富安全，传承财富价值”的使命，为客户提供一站式高端财富管理服务。`,
       philosophy: {
-        title: 'Our Philosophy: Virtue in the world, talent in all directions',
+        title: '公司以“德行天下，才萃八方”为核心价值主张',
         items: [
           {
-            name: 'Virtue in the World',
-            desc: 'We anchor our global operations in unwavering ethics, with integrity, accountability, and principled conduct as our foundational values.'
+            name: '德行天下',
+            desc: '以道德为根基，企业价值观（诚信、责任、正道）核心体现，将道德实践贯穿于全球业务。'
           },
           {
-            name: 'Talent in all Directions',
-            desc: 'We curate elite talent, cross-border solutions, and exclusive opportunities to form a nexus of specialized capabilities.'
+            name: '才萃八方',
+            desc: '以专业能力与稀缺资源（金融人才、跨境架构、投资机会）汇聚四方精英与全球资源。'
           }
         ]
       },
       groupValue: {
-        title: 'DC Wealth ',
-        title1: 'Your Professional Wealth Manager Around',
+        title: '拔萃财富集团 ',
+        title1: '您身边的财富管理专家',
         title2: '',
-        desc: `At DC Wealth Group, we recognize that wealth transcends asset figures-it embodies client trust and life's value. Therefore, we always integrate security, privacy, and sustainability throughout our entire service process. We defend security with technology, protect privacy with professionalism, and ensure continuity with foresight—allowing wealth to grow steadily while trust endures through generations.`
+        desc: `在拔萃财富集团，我们深知财富不仅是资产数字，更是客户信任的托付与人生价值的承载。因此，我们始终将安全性、私密性与可延续性贯穿于服务全流程。我们以科技捍卫安全，以专业恪守私密，以远见铸就延续——让财富在时间维度中稳健生长，让信任在世代更迭间历久弥新。`
       }
     },
     team: {
-      title: 'Management Team',
-      title1: '',
-      desc: `The core management team of DC Wealth Group brings together seasoned leaders from the world's premier financial institutions, insurance giants, and century-old family offices. With an average of 15+ years of industry experience, they harness global expertise to architect deeply customized wealth management solutions for high-net-worth clients.`,
-      desc2: `Every executive lives by our principle of ethical global stewardship, combining professional mastery with extensive industry networks to achieve one unwavering goal: safeguarding and perpetuating wealth on a foundation of absolute security.`
+      title: '管理团队',
+      title1: 'Management Team',
+      desc: `BC Capital brings together seasoned leaders from the world's premier investment firms, fund companies, and banks, with an average of 15+ years industry experience. We deliver cross-border asset allocation solutions for high-net-worth individuals and institutions.`,
+      Sun: {
+        name: `孙新荣 Denny Sun`,
+        postion: `创始合伙人、董事长`,
+        desc: `原中国工商银行香港分行行长，高级经济师，浙江大学工商管理硕士，华东师范大学经济学学士。`,
+        desc2: `孙新荣先生于1989年加入中国工商银行，历任浙江省分行国际业务部副总经理、省分行营业部本级业务部副总经理、新加坡分行副行长、香港分行副行长、总行香港信用卡中心总经理、香港分行行长。`,
+        desc3: `2011年孙先生投身投资领域，创办了厦门京道产业投资基金管理有限公司，参与并主导了国轩高科、北大之路、亚洲钾肥等多个项目的投资。2013年孙先生创办拔萃资本。`,
+        desc4: `孙先生在海外工作、居住多年，具有丰富的海内外资源和广阔的国际视野。现任拔萃资产管理集团董事长。`
+      },
+      Feng: {
+        name: `冯兵 Allen Feng`,
+        postion: `总裁`,
+        desc: `曾任摩根士丹利固定收益部亚太区董事总经理`,
+        desc2: `曾就职于中国银行总行资金部、美林证券固定收益部、德意志银行全球市场部固定收益业务、中国区瑞信固定收益部等`,
+        desc3: `复旦大学世界经济系国际金融专业`
+      },
+      core: `Leadership Team`,
+      manag: `Team`
     },
     value: {
-      title: 'Professional Qualifications and Compliance Assurance',
-      title1: ' ',
-      intro: `DC Wealth Group (DC Group) consistently adheres to the core principle of compliant operations, strictly following relevant laws and regulations in Hong Kong and the international financial services industry. As a licensed institution, we are committed to providing clients with secure, transparent, and efficient wealth management services through our outstanding compliance management system and experienced professional team.  `,
-      licensedQualifications: {
-        title: 'Licensed Qualifications',
-        desc: 'DC Wealth Group holds the following Hong Kong regulatory licenses covering core business verticals:',
-        items: [
-          {
-            name: 'Securities and Futures Commission (SFC) of Hong Kong Type 1, 4, 9 Licenses',
-            desc: '',
-            desc1: 'Type 1: Securities dealing',
-            desc2: 'Type 4: Advising on securities',
-            desc3: 'Type 9: Asset management'
-          },
-          {
-            name: 'Insurance Authority (IA) License',
-            desc: 'Licensed for general insurance and long-term insurance',
-            desc1: '(including ILAS) brokerage'
-          },
-          {
-            name: 'Trust or Company Service Provider (TCSP) License  ',
-            desc: '(Issued by HK Companies Registry)',
-            desc1: 'Covers trust services and corporate secretarial services'
-          }
-        ],
-        closing: 'Through these diversified licensed qualifications, DC Wealth ensures standardized operations across multiple business areas, including wealth management, insurance brokerage, trust, and secretarial services, within a legal and compliant framework.'
-      },
-      professionalTeam: {
-        title: 'Professional Compliance Team',
-        desc: `Our compliance team consists of experts with profound financial and legal expertise and extensive industry experience. They focus on comprehensive risk management, rigorous regulatory review, and client rights protection to ensure the security of client information and assets. The team continuously monitors financial regulatory developments in Hong Kong and globally (e.g., anti-money laundering (AML), know-your-customer (KYC), data privacy, etc.), ensuring the company's operations always comply with the latest regulatory requirements.  `
-      },
-      policyFormulation: {
-        title: 'Compliance Policy Formulation',
-        desc: 'Based on the latest regulations and industry best practices, we establish clear and detailed internal compliance policies and processes to cover all business segments, including wealth management, insurance brokerage, trust, and secretarial services.  '
-      },
-      riskMonitoring: {
-        title: 'Risk Monitoring and Compliance Review',
-        desc: 'We conduct comprehensive compliance assessments and risk monitoring for client transactions, business processes, and product design to effectively manage legal and regulatory risks. A continuous compliance review mechanism is established to ensure ongoing adherence to regulatory standards. '
-      },
-      closing: 'DC Wealth Group is dedicated to building a trustworthy wealth management platform through professional and rigorous compliance management, ',
-      closing1: 'providing a solid foundation for clients’ long-term asset security and family wealth inheritance. '
+      title: '资质与合规',
+      title1: 'Professional Qualifications and Compliance',
+      desc: `Officially obtained tax-exempt status from Hong Kong Inland Revenue Department!`,
+      desc2: `Rooted in Hong Kong, we are dedicated to helping special youth groups suffering from autism, depression, ADHD, etc. Through financial assistance (Dream Builder Fund), professional support networks, and psychological care, we illuminate lives in need. This approval is both an honor and a responsibility. We cordially invite you to join the [Ray of Light Initiative] and become a "Light Partner"—let’s build a path of hope together and witness lives blossoming toward the sun!`,
     },
-    licenses: {
-      title: 'DC Wealth Group Subsidiary Corporation & Licenses',
-      title1: ' ',
-      table: {
-        headers: ['Corporation', 'Relationship', 'License', 'Service'],
-        rows: [
-          {
-            corporation: `DC Wealth Management (HK) Limited`,
-            relationship: `DC Wealth Management (HK) Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
-            license: `Under the Securities and Futures Ordinance licensed to conduct Type 1 (Dealing in securities), Type 4 (Advising on securities) and Type 9 (Asset management) regulated activities (CE No.: BFT276)`,
-            service: `DC Wealth Management (HK) Limited provides family office and external asset management (EAM) services. The services provided under the Type 9 license are for professional investors only.`
-          },
-          {
-            corporation: `DC Insurance Consulting Limited`,
-            corporation2: '',
-            relationship: `DC Insurance Consulting Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
-            license: `Insurance Broker Company under the Insurance Ordinance to conduct General & Long Term Business (including Linked Long Term Business) related regulated activities (License No.: FB1497) and a Registered Principal Intermediary under the Mandatory Provident Fund Schemes Ordinance to conduct regulated activities (MPF Registration No. IC000890)`,
-            service: `DC Insurance Consulting Limited provides insurance brokerage individual business and insurance brokerage company business.`
-          },
-          {
-            corporation: 'China Hong Kong Wealth Management Limited ',
-            corporation2: '',
-            relationship: `China Hong Kong Wealth Management Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
-            license: `Insurance Broker Company under the Insurance Ordinance to conduct Long Term Business (including Linked Long Term Business) related regulated activities (License No.: FB1248)`,
-            service: `China Hong Kong Wealth Management Limited provides insurance brokerage individual business and insurance brokerage company business.`
-          },
-          {
-            corporation: 'DC Trust Asia Limited',
-            relationship: `DC Trust Asia Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
-            license: `Licensed Trust or Company Service Provider under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance and Trustee Ordinance to carries on a company or trust service business (License No.: TC000283)`,
-            service: `DC Trust Asia Limited provides offshore trust services.`
-          },
-          {
-            corporation: `DC Fiduciary Services Limited`,
-            relationship: `DC Fiduciary Services Limited is wholly owned by DC Wealth Group, formed and registered in Hong Kong`,
-            license: `Licensed Trust or Company Service Provider under the Anti-Money Laundering and Counter-Terrorist Financing Ordinance to carries on a company service business (License No.: TC002271)`,
-            service: `DC Fiduciary Services Limited provides company secretarial service.`
-          }
-        ]
+    proposition: {
+      title: '拔萃财富集团公司及牌照',
+      title1: 'DC Wealth Group Subsidiary Corporation & Licenses',
+      desc: `The group has always adhered to compliance as its core principle, strictly abiding by relevant laws and regulations of the financial services industry in Hong Kong and internationally. As a licensed institution, BC Capital leverages its outstanding compliance management system and professional team to provide clients with secure, transparent, and efficient asset management services.`,
+      institutions: {
+        title: `Licensed Operations`,
+        item1: {
+          desc1: `Type 1: Securities dealing`,
+          desc2: `Type 4: Advising on securities`,
+          desc3: `Type 9: Asset management`,
+          desc4: `(including virtual asset investments)`,
+          desc5: `Ensures full compliance for Hong Kong market operations.`,
+        },
+        item2: {
+          desc1: `Authorized for comprehensive asset management services catering to HNWI needs.`,
+
+        },
+        item3: {
+          desc1: `Covers private equity and securities investments, bridging China-global capital flows.`,
+        },
       },
-      disclaimer: `The information on this website is for reference only, and is not and should not be regarded as an offer, solicitation, invitation or recommendation to buy or sell any investment products or the basis for investment decisions, nor should it be construed as professional advice. All third-party logos, brands, or trademarks displayed on this website are for identification purposes only and remain the property of their respective owners. Images are for illustrative purposes only and do not constitute any investment advice or guarantee. Any investment involves risks, please fully understand the characteristics and risks of the service. Persons who read the contents of this website or make any investment decisions should fully understand the risks and the relevant legal, taxation and accounting features and consequences, determine whether the investment is suitable for their financial situation and investment objectives, and whether they can bear the relevant risks according to their personal circumstances, seek appropriate professional advice if necessary, and should not rely on the reference materials provided on this website.`
+      compliance: {
+        title: `Professional Compliance Framework`,
+        desc: `BC Capital has established a rigorous compliance management framework that covers Know Your Client (KYC), Anti-Money Laundering (AML), data & privacy protection, and investment compliance monitoring, ensuring the safety and legality of client assets from the source.`
+      },
+      standard: {
+        title: `Global Risk Management Standards`,
+        desc: `Our company ensures the robustness and sustainability of its investment strategies through real-time risk monitoring, portfolio management, and regular reviews. With low volatility and low drawdown as core objectives, it helps clients steadily increase their value in complex market environments.`
+      },
+      transparency: {
+        title: `Transparency and Safeguards`,
+        desc: `BC Capital adheres to the principle of information transparency, regularly disclosing investment portfolio performance and market dynamics to clients, ensuring that clients can clearly understand the status of asset operations. At the same time, client assets are always independently held in accounts at top international banks, providing multiple layers of security.`
+      },
+      content: `With full-spectrum licenses, institutional-grade compliance, and proven risk controls, BC Capital is your trusted global asset management partner.`
     },
   },
 } as const

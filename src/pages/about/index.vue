@@ -2,28 +2,32 @@
   <div>
     <div class="relative">
       <img src="@/assets/images/about/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] pl-14 pr-20 pt-30 text-white absolute top-30 w-110 left-46">
+      <div class="bg-[#072766] pl-10 pr-20 pt-30 text-white absolute top-30 w-120 left-46">
         <p class="text-6xl font-bold mb-4">{{ t('pages.about.banner.title') }}</p>
         <p class="text-4xl opacity-60">{{ t('pages.about.banner.title1') }}</p>
         <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-24"></div>
-        <p class="text-4xl font-bold leading-14 mt-8 mb-30">{{ t('pages.about.banner.desc') }} <br />{{
-          t('pages.about.banner.desc2') }}</p>
+        <p class="text-4xl font-bold mt-8 mb-30" :class="{ '!text-3xl  !leading-10': isEn }">{{
+          t('pages.about.banner.desc') }} <br />{{
+            t('pages.about.banner.desc3') }} <br />{{
+            t('pages.about.banner.desc2') }} <br />{{
+            t('pages.about.banner.desc4') }}</p>
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-170 text-2xl pr-39 py-12">{{ t('pages.about.desc') }}</p>
+      <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-32 py-12">{{ t('pages.about.desc') }}</p>
     </div>
-    <div class="flex items-center justify-center gap-10 mt-20">
-      <p class="w-60 h-20 flex items-center justify-center text-3xl text-white font-bold bg-[#334CA8] ">
+    <div class="flex items-center justify-center gap-10 mt-20 text-3xl text-white text-center"
+      :class="{ '!text-2xl': isEn }">
+      <p class="w-60 h-20 flex items-center justify-center  font-bold bg-[#334CA8] ">
         {{ t('pages.about.tab.tab1') }}
       </p>
-      <p class="w-60 h-20  flex items-center justify-center text-3xl opacity-40 text-white bg-[#334CA8] cursor-pointer"
+      <p class="w-60 h-20  flex items-center justify-center  opacity-40  bg-[#334CA8] cursor-pointer"
         @click="router.push({ name: 'team' })">
         {{ t('pages.about.tab.tab2') }}
       </p>
-      <p class="w-60 h-20  flex items-center justify-center text-3xl opacity-40 text-white bg-[#334CA8] cursor-pointer"
-        @click="router.push({ name: 'licenses' })">
+      <p class="w-60 h-20  flex items-center justify-center opacity-40 bg-[#334CA8] cursor-pointer"
+        @click="router.push({ name: 'proposition' })">
         {{ t('pages.about.tab.tab3') }}
       </p>
-      <p class="w-60 h-20 flex items-center justify-center text-3xl opacity-40 text-white bg-[#334CA8] cursor-pointer"
+      <p class="w-60 h-20 flex items-center justify-center opacity-40  bg-[#334CA8] cursor-pointer"
         @click="router.push({ name: 'value' })">
         {{ t('pages.about.tab.tab4') }}
       </p>
@@ -31,7 +35,9 @@
     <div class="my-20 px-38 relative mb-25">
       <div class="p-8 relative">
         <div class="w-full h-88 bg-[#C1A894] absolute top-0 left-0"></div>
-        <img src="@/assets/images/about/image1.png" alt="" srcset="" class="w-full h-auto z-10 relative">
+        <div class="w-full h-[619px] z-100 relative">
+          <video ref="videoRef" class="video-js" style="width: 100%; height: 100%"></video>
+        </div>
       </div>
       <img src="@/assets/images/about/bg3.png" alt="" srcset="" class="w-full absolute -bottom-25 left-0">
     </div>
@@ -50,7 +56,7 @@
         </div>
         <div class="flex-1 text-center bg-white shadow-xs">
           <img src="@/assets/images/about/image3.png" alt="" srcset="" class="w-full h-auto">
-          <p class="text-[#345CAC] text-4xl">{{ t('pages.about.culture.desc2') }}</p>
+          <p class="text-[#345CAC] text-4xl" :class="{ 'h-[5rem]': isEn }">{{ t('pages.about.culture.desc2') }}</p>
           <p class="text-[#0E285C] text-2xl my-10">{{ t('pages.about.culture.content3') }}<br />{{
             t('pages.about.culture.content4') }}</p>
         </div>
@@ -84,12 +90,60 @@
 </template>
 
 <script setup lang="ts">
+import Videojs from 'video.js';
+import 'video.js/dist/video-js.min.css';
+import { computed, onMounted, ref, shallowRef } from 'vue';
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router';
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
+import mp4Url from '@/assets/video/2.mp4';
+import imgUrl from '@/assets/images/about/image1.png';
 const router = useRouter()
+
+const isEn = computed(() => locale.value === 'en')
+
+const videoRef = ref(null);
+const videoInstance = shallowRef(); //提高性能
+const potions = {
+  sources: [
+    // 两种播放格式
+    {
+      type: 'video/mp4',
+      src: mp4Url,
+    },
+    // {
+    //   src: 'https://gcalic.v.myalicdn.com/gc/jsh02_1/index.m3u8?contentid=2820180516001',
+    //   type: 'application/x-mpegURL',
+    // },
+  ],
+  autoplay: false, //是否自动播放
+  loop: false, //是否循环播放
+  controls: true, //控制器
+  preload: true, //是否预加载
+  language: 'zh-CN', //显示的语言 中文
+  playbackRates: [0.5, 1, 1.5, 2], //播放速度
+  poster: imgUrl, //封面图
+};
+/**
+ * 初始化video
+ */
+const initVideo = () => {
+  if (!videoRef.value) return;
+  // Videojs第一个参数可以使video标签的id或者目标标签元素，第二个参数为配置项。
+  videoInstance.value = Videojs(videoRef.value, potions);
+};
+onMounted(() => {
+  initVideo();
+
+})
 
 </script>
 
-<style scoped></style>
+<style scoped>
+:deep(.vjs-big-play-button) {
+
+  display: none;
+
+}
+</style>

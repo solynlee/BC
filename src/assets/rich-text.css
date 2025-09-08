@@ -17,63 +17,63 @@
 
 .rich-text-content p {
     display: block !important;
-    margin: 1em !important;
-    line-height: 1.6 !important;
+    /* margin: 1em !important; */
+    /* line-height: 1.6 !important; */
 }
 
 .rich-text-content h1 {
     display: block !important;
     font-size: 2em !important;
-    margin: 0.67em 0 !important;
+    /* margin: 0.67em 0 !important; */
     font-weight: bold !important;
 }
 
 .rich-text-content h2 {
     display: block !important;
     font-size: 1.5em !important;
-    margin: 0.83em 0 !important;
+    /* margin: 0.83em 0 !important; */
     font-weight: bold !important;
 }
 
 .rich-text-content h3 {
     display: block !important;
     font-size: 1.17em !important;
-    margin: 1em 0 !important;
+    /* margin: 1em 0 !important; */
     font-weight: bold !important;
 }
 
 .rich-text-content h4 {
     display: block !important;
     font-size: 1em !important;
-    margin: 1.33em 0 !important;
+    /* margin: 1.33em 0 !important; */
     font-weight: bold !important;
 }
 
 .rich-text-content h5 {
     display: block !important;
     font-size: 0.83em !important;
-    margin: 1.67em 0 !important;
+    /* margin: 1.67em 0 !important; */
     font-weight: bold !important;
 }
 
 .rich-text-content h6 {
     display: block !important;
     font-size: 0.67em !important;
-    margin: 2.33em 0 !important;
+    /* margin: 2.33em 0 !important; */
     font-weight: bold !important;
 }
 
 .rich-text-content ul {
     display: block !important;
     list-style-type: disc !important;
-    margin: 1em 0 !important;
+    /* margin: 1em 0 !important; */
     padding-left: 40px !important;
 }
 
 .rich-text-content ol {
     display: block !important;
     list-style-type: decimal !important;
-    margin: 1em 0 !important;
+    /* margin: 1em 0 !important; */
     padding-left: 40px !important;
 }
 
@@ -156,13 +156,13 @@
     max-width: 100% !important;
     height: auto !important;
     display: block !important;
-    margin: 10px auto !important;
+    /* margin: 10px auto !important; */
 }
 
 .rich-text-content table {
     border-collapse: collapse !important;
     width: 100% !important;
-    margin: 1em 0 !important;
+    /* margin: 1em 0 !important; */
     border: 1px solid #ddd !important;
 }
 
@@ -183,7 +183,7 @@
     height: 1px !important;
     border: 0 !important;
     border-top: 1px solid #ccc !important;
-    margin: 1em 0 !important;
+    /* margin: 1em 0 !important; */
     padding: 0 !important;
 }
 

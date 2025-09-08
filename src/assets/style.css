@@ -76,6 +76,8 @@ html {
         padding: 0;
         overflow-x: hidden;
         scroll-behavior: smooth;
+        /* 优化滚动性能 */
+        scroll-padding-top: 0;
     }
     body {
         width: 100%;
@@ -91,6 +93,9 @@ html {
         letter-spacing: 0.05em; /* 增加字符间距，相当于 tracking-wider */
         /* 禁用过度滚动的弹性效果 */
         overscroll-behavior: none;
+        /* 优化滚动体验 */
+        scroll-behavior: smooth;
+        scroll-padding-top: 0;
     }
     #app {
         width: 100%;
@@ -151,6 +156,12 @@ html {
     /* 平滑滚动 */
     .smooth-scroll {
         scroll-behavior: smooth;
+    }
+
+    /* 快速平滑滚动 - 用于路由跳转 */
+    .fast-smooth-scroll {
+        scroll-behavior: smooth;
+        transition: scroll-behavior 0.1s ease-out;
     }
 
     /* 自定义缓动函数 */
