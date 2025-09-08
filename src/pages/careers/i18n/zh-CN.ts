@@ -21,4 +21,9 @@ export default {
       companyDescription: '公司介绍'
     }
   },
+<<<<<<< HEAD
 } as const
+=======
+} as const
+
+>>>>>>> origin/main
