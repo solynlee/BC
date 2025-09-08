@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Google地图加载器</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #mapContainer {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="mapContainer"></div>
+    
+    <script>
+        let map;
+        let marker;
+        let infoWindow;
+        
+        // 等待来自父窗口的配置
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'initMap') {
+                initGoogleMap(event.data.config);
+            }
+        });
+
+        function initGoogleMap(config) {
+            try {
+                // 检查Google Maps API是否已加载
+                if (!window.google || !window.google.maps) {
+                    // 动态加载Google Maps API
+                    loadGoogleMapsAPI(config);
+                    return;
+                }
+                
+                createMap(config);
+                
+            } catch (error) {
+                console.error('Google Maps初始化错误:', error);
+                window.parent.postMessage({
+                    type: 'mapReady',
+                    success: false,
+                    error: error.message
+                }, '*');
+            }
+        }
+
+        function loadGoogleMapsAPI(config) {
+            // 从配置中获取API密钥
+            const apiKey = config.apiKey || 'AIzaSyDummy_REPLACE_WITH_REAL_KEY';
+            const language = config.language || 'zh-CN';
+            const region = config.region || 'SG';
+            
+            // 创建script标签动态加载Google Maps API
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initCallback&libraries=places&language=${language}&region=${region}`;
+            script.async = true;
+            script.defer = true;
+            
+            // 设置全局回调函数
+            window.initCallback = function() {
+                createMap(config);
+            };
+            
+            script.onerror = function() {
+                console.error('Google Maps API加载失败');
+                window.parent.postMessage({
+                    type: 'mapReady',
+                    success: false,
+                    error: 'Google Maps API加载失败'
+                }, '*');
+            };
+            
+            document.head.appendChild(script);
+        }
+
+        function createMap(config) {
+            try {
+                // 创建地图中心点
+                const center = new google.maps.LatLng(config.latitude, config.longitude);
+                
+                // 创建地图
+                map = new google.maps.Map(document.getElementById('mapContainer'), {
+                    center: center,
+                    zoom: config.zoom || 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    // 针对新加坡优化的地图选项
+                    styles: [
+                        {
+                            "featureType": "poi",
+                            "elementType": "labels.text",
+                            "stylers": [{"visibility": "on"}]
+                        },
+                        {
+                            "featureType": "poi.business",
+                            "stylers": [{"visibility": "on"}]
+                        }
+                    ],
+                    // 启用新加坡本地化
+                    region: 'SG',
+                    language: 'zh-CN'
+                });
+
+                // 添加标记点
+                marker = new google.maps.Marker({
+                    position: center,
+                    map: map,
+                    title: config.title || '位置信息',
+                    animation: google.maps.Animation.DROP
+                });
+
+                // 创建信息窗口
+                infoWindow = new google.maps.InfoWindow({
+                    content: createInfoWindowContent(config)
+                });
+
+                // 默认显示信息窗口
+                infoWindow.open(map, marker);
+
+                // 点击标记重新打开信息窗口
+                marker.addListener('click', function() {
+                    infoWindow.open(map, marker);
+                });
+
+                // 通知父窗口地图加载完成
+                window.parent.postMessage({
+                    type: 'mapReady',
+                    success: true,
+                    provider: 'google'
+                }, '*');
+
+            } catch (error) {
+                console.error('创建Google地图错误:', error);
+                window.parent.postMessage({
+                    type: 'mapReady',
+                    success: false,
+                    error: error.message
+                }, '*');
+            }
+        }
+
+        function createInfoWindowContent(config) {
+            return `
+                <div style="padding: 8px; max-width: 250px;">
+                    <h4 style="margin: 0 0 8px 0; font-size: 14px; font-weight: bold; color: #333;">
+                        ${config.title || '位置信息'}
+                    </h4>
+                    ${config.address ? `
+                        <p style="margin: 0 0 8px 0; font-size: 12px; color: #666; line-height: 1.4;">
+                            ${config.address}
+                        </p>
+                    ` : ''}
+                    <div style="font-size: 11px; color: #999;">
+                        坐标: ${config.latitude.toFixed(6)}, ${config.longitude.toFixed(6)}
+                    </div>
+                </div>
+            `;
+        }
+
+        // 通知父窗口API准备就绪
+        function checkAndNotifyReady() {
+            // 对于Google Maps，我们在收到initMap消息时才开始加载
+            window.parent.postMessage({
+                type: 'apiReady',
+                provider: 'google'
+            }, '*');
+        }
+        
+        // 立即通知准备就绪
+        checkAndNotifyReady();
+    </script>
+</body>
+</html>

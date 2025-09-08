@@ -1,0 +1,65 @@
+<template>
+  <section>
+    <div class="relative">
+      <img src="@/assets/images/careers/bg.png" alt="" srcset="" class="w-full">
+      <div class="bg-[#072766] pl-14 pr-20 pt-30 text-white absolute top-29 w-110 left-50 ">
+        <p class="text-6xl font-bold mb-8">{{ t('pages.careers.banner.title') }}</p>
+        <p class="text-4xl opacity-60">{{ t('pages.careers.banner.title1') }}</p>
+        <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-18"></div>
+        <p class="text-4xl font-bold ">{{ t('pages.careers.banner.desc') }}</p>
+        <p class="text-4xl font-bold leading-12 mt-8 mb-12">{{ t('pages.careers.banner.desc2') }} <br />{{
+          t('pages.careers.banner.desc3') }}</p>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="pl-60 pt-80">
+        <p class="text-[#072867] text-2xl w-102">{{ t('pages.careers.desc') }}</p>
+        <div class="flex items-center gap-4 mt-13 mb-30 cursor-pointer">
+          <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
+            <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+          <div class="text-[#334CA8] text-xl border-b border-[#334CA8]">{{ t('pages.home.product.btn')
+          }}</div>
+        </div>
+      </div>
+      <img src="@/assets/images/careers/image1.png" alt="" srcset=""
+        class="w-180 h-auto absolute bottom-26 right-44 z-90">
+      <img src="@/assets/images/careers/image2.png" alt="" srcset="" class="w-full h-auto">
+    </div>
+    <div class="px-38 py-30">
+      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+        <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
+        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.careers.desc2') }}</span>
+      </div>
+      <div class="px-10 py-16 grid grid-cols-3 gap-4">
+        <div class="bg-white p-10 flex flex-col" v-for="item in 11" :key="item">
+          <p class="text-[#9F8570] text-4xl font-bold"> 市场营销助理</p>
+          <p class="text-2xl text-[#072867] my-10 flex-1">专业视频内容制作与管理 <br />专业营销材料设计与制作<br /> 市场活动全流程支持
+            <br />新媒体运营支持与市场洞察</p>
+          <div class="flex items-center justify-between">
+            <p class="text-2xl text-[#072867] opacity-60">中国香港</p>
+            <div class="flex items-center gap-4  cursor-pointer">
+              <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
+                <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
+</script>
+
+
+<style scoped></style>
