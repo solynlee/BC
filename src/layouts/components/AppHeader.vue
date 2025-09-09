@@ -1,6 +1,6 @@
 <template>
   <header id="page-top" class="relative bg-[#001a48]">
-    <div class="flex justify-between items-center  px-10 py-8 ">
+    <div class="flex justify-between items-center  px-10 py-8 pb-4 pl-14">
       <img src="@/assets/images/header/logo.png" alt="logo" class="h-16 w-auto">
       <img src="@/assets/images/header/title.png" alt="logo" class="h-12 w-auto">
     </div>

@@ -44,7 +44,7 @@
         {{ t('pages.home.product.content4') }}</p>
       <div class="mt-20 relative">
         <img src="@/assets/images/home/concept.png" alt="" srcset="" class="w-[56%]">
-        <div class="bg-white w-[54%] absolute top-1/2 right-0 translate-y-[-50%] p-10">
+        <div class="bg-white w-[50%] absolute top-1/2 right-0 translate-y-[-50%] p-10">
           <p class="text-[#C1A894] text-4xl font-bold"> {{ t('pages.home.product.concept.title') }}<br /> {{
             t('pages.home.product.concept.title2') }}</p>
           <p class="text-[#072867] text-[21px]  mt-6">
@@ -62,7 +62,7 @@
       </div>
       <div class="mt-10 relative flex justify-end">
         <img src="@/assets/images/home/ema.png" alt="" srcset="" class="w-[56%]">
-        <div class="bg-white w-[54%] absolute top-1/2 left-0 translate-y-[-50%] p-10">
+        <div class="bg-white w-[50%] absolute top-1/2 left-0 translate-y-[-50%] p-10">
           <p class="text-[#C1A894] text-4xl font-bold"> {{ t('pages.home.product.ema.title') }}</p>
           <p class="text-[#072867] text-[21px] mt-6 py-4">
             {{ t('pages.home.product.ema.content') }}</p>
