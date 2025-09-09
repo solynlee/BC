@@ -51,9 +51,9 @@
         <div class="pt-32 relative " v-for="item in teamList2" :key="item.id">
           <img :src="item.conver" alt="" srcset="" class="w-auto h-68 absolute top-0 left-0">
           <div class="bg-white shadow py-10 px-7 h-full flex flex-col ">
-            <div class="text-[#C1A894] pl-74 mb-14 h-24">
+            <div class="text-[#C1A894] pl-72 mb-14 h-24">
               <p class="text-4xl font-bold">{{ item.title }}</p>
-              <p class="text-2xl mt-2 ">{{ item.abstract }}</p>
+              <p class="text-2xl mt-2 " style="white-space: nowrap;">{{ item.abstract }}</p>
             </div>
             <div class="text-[#0E285C] text-xl pl-4 pr-4  flex-1 py-1 border-l-8 border-[#345CAC]">
               <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="item.content"></p>
