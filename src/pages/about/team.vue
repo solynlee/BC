@@ -31,6 +31,10 @@
         @click="router.push({ name: 'value' })">
         {{ t('pages.about.tab.tab4') }}
       </p>
+      <p class="w-80 h-20 flex items-center justify-center opacity-40  bg-[#334CA8] cursor-pointer"
+        @click="router.push({ name: 'licenses' })">
+        {{ t('pages.about.tab.tab5') }}
+      </p>
     </div>
     <div class="px-38 my-20 relative">
       <div class="relative px-4 mb-36" v-if="teamList1 && teamList1.length > 0">
@@ -38,22 +42,22 @@
         <div class="w-210 h-full bg-white shadow absolute right-0 -bottom-16 pl-60 pr-20 ">
           <div class="bg-[#345CAC] h-4 w-40"></div>
           <p class="text-[#C1A894] font-bold text-5xl mt-20 mb-2">{{ teamList1?.[0].title }}</p>
-          <p class="text-[#C1A894] text-3xl mb-10">{{ teamList1?.[0].abstract }}</p>
+          <p class="text-[#C1A894] text-3xl mb-10" v-html="teamList1?.[0].abstract"></p>
           <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="teamList1?.[0].content"></p>
 
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.team.core') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.team.core') }}</span>
       </div>
       <div class="px-4 mt-10 grid grid-cols-2 gap-8" v-if="teamList2">
-        <div class="pt-32 relative " v-for="item in teamList2" :key="item.id">
+        <div class="pt-28 relative " v-for="item in teamList2" :key="item.id">
           <img :src="item.conver" alt="" srcset="" class="w-auto h-68 absolute top-0 left-0">
           <div class="bg-white shadow py-10 px-7 h-full flex flex-col ">
             <div class="text-[#C1A894] pl-72 mb-14 h-24">
               <p class="text-4xl font-bold">{{ item.title }}</p>
-              <p class="text-2xl mt-2 " style="white-space: nowrap;">{{ item.abstract }}</p>
+              <p class="text-2xl mt-2 " style="white-space: nowrap;" v-html="item.abstract"></p>
             </div>
             <div class="text-[#0E285C] text-xl pl-4 pr-4  flex-1 py-1 border-l-8 border-[#345CAC]">
               <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="item.content"></p>
@@ -63,17 +67,17 @@
 
 
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.team.manag') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.team.manag') }}</span>
       </div>
       <div class="px-4 mt-10 grid grid-cols-3 gap-8" v-if="teamList3">
-        <div class="pt-32 relative" v-for="item in teamList3" :key="item.id">
+        <div class="pt-28 relative" v-for="item in teamList3" :key="item.id">
           <img :src="item.conver" alt="" srcset="" class="w-auto h-68 absolute top-0 left-1/2 -translate-x-1/2">
           <div class="bg-white shadow pt-48 pb-10 px-7 h-full flex flex-col gap-6">
             <div class="text-[#C1A894] text-center h-20">
               <p class="text-3xl font-bold">{{ item.title }}</p>
-              <p class="text-2xl mt-2 ">{{ item.abstract }}</p>
+              <p class="text-2xl mt-2 " v-html="item.abstract"></p>
             </div>
             <div class="text-[#0E285C] text-xl pl-4 pr-4 py-2  border-l-8 border-[#345CAC] flex-1">
               <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="item.content"></p>

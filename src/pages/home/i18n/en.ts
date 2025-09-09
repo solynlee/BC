@@ -56,8 +56,8 @@ export default {
       },
       investment: {
         title: `PE/VC Investment Service`,
-        content: `Partnering with globally premier and regionally elite fund managers to secure priority allocations in top-tier private equity funds and exclusive`,
-        content2: `co-investment rights in premium deals.`,
+        content: `Global investment footprint spanning China, the United States, Israel, and Europe`,
+        content2: `Focus on cutting-edge sectors including healthcare, advanced manufacturing, artificial intelligence, and fintech.`,
         desc: `Partnering with globally premier and regionally leading fund managers to secure priority allocations in top-tier private equity funds and exclusive co-investment rights in premium projects.`
       },
       choose: {

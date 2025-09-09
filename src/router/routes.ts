@@ -18,10 +18,13 @@ export const routes: RouteRecordRaw[] = [
   { path: '/strategy/company', name: 'company', component: () => import('@/pages/strategy/company.vue'), meta: { titleKey: 'pages.company.title' } },
   { path: '/strategy/planning', name: 'planning', component: () => import('@/pages/strategy/planning.vue'), meta: { titleKey: 'pages.planning.title' } },
 
-  // { path: '/insights/detail', name: 'insightsDetail', component: () => import('@/pages/insights/detail.vue'), meta: { titleKey: 'pages.insightsDetail.title' } },
-  // { path: '/careers/detail', name: 'careersDetail', component: () => import('@/pages/careers/detail.vue'), meta: { titleKey: 'pages.careersDetail.title' } },
+  { path: '/insights/detail', name: 'insightsDetail', component: () => import('@/pages/insights/detail.vue'), meta: { titleKey: 'pages.insightsDetail.title' } },
+  { path: '/careers/detail', name: 'careersDetail', component: () => import('@/pages/careers/detail.vue'), meta: { titleKey: 'pages.careersDetail.title' } },
   { path: '/about/licenses', name: 'licenses', component: () => import('@/pages/about/licenses.vue'), meta: { titleKey: 'pages.licenses.title' } },
-  // { path: '/news/detail', name: 'newsDetail', component: () => import('@/pages/news/detail.vue'), meta: { titleKey: 'pages.newsDetail.title' } },
+  { path: '/news/detail', name: 'newsDetail', component: () => import('@/pages/news/detail.vue'), meta: { titleKey: 'pages.newsDetail.title' } },
+  { path: '/about/culture', name: 'culture', component: () => import('@/pages/about/culture.vue'), meta: { titleKey: 'pages.culture.title' } },
+  { path: '/careers/acquisition', name: 'acquisition', component: () => import('@/pages/careers/acquisition.vue'), meta: { titleKey: 'pages.acquisition.title' } },
+  { path: '/about/valueDetail', name: 'valueDetail', component: () => import('@/pages/about/detail.vue'), meta: { titleKey: 'pages.valueDetail.title' } },
 ]
 
 

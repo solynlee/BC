@@ -16,7 +16,8 @@
               <p class="text-3xl font-bold line-clamp-1">{{ list1?.[0].title }}</p>
               <p class=" line-clamp-2 mt-4 mb-8">{{ list1?.[0].abstract }}</p>
               <div class="flex items-center justify-between">
-                <div class="flex items-center gap-4  cursor-pointer">
+                <div class="flex items-center gap-4  cursor-pointer"
+                  @click="router.push({ name: 'newsDetail', query: { code: list1?.[0].articleCode } })">
                   <div class="bg-[#A48871] w-10 h-10 flex items-center justify-center rounded-full">
                     <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -36,7 +37,8 @@
                 <p class="text-3xl font-bold line-clamp-1">{{ list1?.[1].title }}</p>
 
                 <div class="flex items-center justify-between mt-10">
-                  <div class="flex items-center gap-4  cursor-pointer">
+                  <div class="flex items-center gap-4  cursor-pointer"
+                    @click="router.push({ name: 'newsDetail', query: { code: list1?.[1].articleCode } })">
                     <div class="bg-[#A48871] w-10 h-10 flex items-center justify-center rounded-full">
                       <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -55,7 +57,8 @@
                 <p class="text-3xl font-bold line-clamp-1">{{ list1?.[2].title }}</p>
 
                 <div class="flex items-center justify-between mt-10">
-                  <div class="flex items-center gap-4  cursor-pointer">
+                  <div class="flex items-center gap-4  cursor-pointer"
+                    @click="router.push({ name: 'newsDetail', query: { code: list1?.[2].articleCode } })">
                     <div class="bg-[#A48871] w-10 h-10 flex items-center justify-center rounded-full">
                       <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -71,11 +74,11 @@
           </div>
         </div>
         <div class="my-30">
-          <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+          <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-            <span class="text-[#001949] text-4xl font-bold">{{ t('pages.news.title3') }}</span>
+            <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title3') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#001949]]" v-for="value in list2" :key="value.id">
+          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list2" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
@@ -84,7 +87,8 @@
                 <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex items-center gap-4 mt-8 cursor-pointer">
+                <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                  @click="router.push({ name: 'newsDetail', query: { code: value.articleCode } })">
                   <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                     <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -100,11 +104,11 @@
 
         </div>
         <div class="my-30">
-          <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+          <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-            <span class="text-[#001949] text-4xl font-bold">{{ t('pages.news.title4') }}</span>
+            <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title4') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#001949]]" v-for="value in list3" :key="value.id">
+          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list3" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
@@ -113,7 +117,8 @@
                 <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex items-center gap-4 mt-8 cursor-pointer">
+                <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                  @click="router.push({ name: 'newsDetail', query: { code: value.articleCode } })">
                   <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                     <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -129,11 +134,11 @@
 
         </div>
         <div class="my-30">
-          <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+          <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-            <span class="text-[#001949] text-4xl font-bold">{{ t('pages.news.title5') }}</span>
+            <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title5') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#001949]]" v-for="value in list4" :key="value.id">
+          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list4" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
@@ -142,7 +147,8 @@
                 <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex items-center gap-4 mt-8 cursor-pointer">
+                <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                  @click="router.push({ name: 'newsDetail', query: { code: value.articleCode } })">
                   <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                     <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -157,11 +163,11 @@
           </div>
         </div>
         <div class="my-30">
-          <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+          <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-            <span class="text-[#001949] text-4xl font-bold">{{ t('pages.news.title6') }}</span>
+            <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title6') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#001949]]" v-for="value in list5" :key="value.id">
+          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list5" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
@@ -170,7 +176,8 @@
                 <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
-                <div class="flex items-center gap-4 mt-8 cursor-pointer">
+                <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                  @click="router.push({ name: 'newsDetail', query: { code: value.articleCode } })">
                   <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                     <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -193,10 +200,12 @@
 <script setup lang="ts">
 
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 const { t } = useI18n()
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
 import dayjs from 'dayjs'
+const router = useRouter()
 interface List {
   id: number
   title: string
@@ -204,6 +213,7 @@ interface List {
   conver: string
   content: string
   publishDate: number
+  articleCode: string
 }
 
 const { data: list1 } = useCustomApiWithAutoRefresh<List[]>(() => api.get({

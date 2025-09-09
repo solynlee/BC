@@ -1,61 +1,36 @@
 <template>
-  <PageWrapper>
-    <section class="text-[#072867]">
-      <div class="relative">
-        <img src="@/assets/images/careers/detail-banner.png" alt="" srcset="" class="w-full h-42 md:h-96 object-cover">
-
-
-
-        <div class="absolute bottom-0 w-full ">
-          <Container type="extra-wide">
-            <p class="text-lg  md:text-3xl font-bold">{{ jobDetail?.subtitle }}</p>
-            <p class="text-2xl  md:text-5xl font-bold mt-3 md:mt-4 lg:mt-5 xl:mt-6 mb-6 md:mb-8 lg:mb-10 xl:mb-12">
-              {{
-                jobDetail?.jobTitle }}</p>
-            <div class="w-16 md:w-24 lg:w-32 xl:w-36 h-1 md:h-1.5 lg:h-2 xl:h-2.5 bg-[#A37B24]"></div>
-          </Container>
+  <section class="px-38 py-20">
+    <div class="relative">
+      <img src="@/assets/images/careers/sha1.png" alt="" srcset="" class="w-full relative z-10 h-auto">
+      <img src="@/assets/images/careers/sha2.png" alt="" srcset=""
+        class="w-[98%] h-auto absolute -bottom-6 left-1/2 -translate-x-1/2">
+      <div class="absolute w-full h-full top-0 left-0 z-20 p-20 flex justify-between items-end">
+        <div>
+          <p class="text-[#9F8570] text-3xl mb-4">{{ jobDetail?.subtitle }}</p>
+          <p class="text-[#072867] text-5xl font-bold">{{ jobDetail?.jobTitle }}</p>
+        </div>
+        <div>
+          <p class="text-[#072867] text-2xl ">{{ t('pages.careersDetail.jobResponse') }} {{ jobDetail?.workPlace }}</p>
         </div>
       </div>
-      <Container type="extra-wide">
-        <div class="bg-[#072867] text-white p-4 mt-10  text-3xl">
-          <span>
-            {{ t('pages.careers.jobOpenings.workPlace') }}: {{
-              jobDetail?.workPlace }} {{ jobDetail?.workPlaceRemark }}</span>
-        </div>
-        <div
-          class="flex items-center gap-3 md:gap-6 border-b border-[#1A2E56] pb-3  md:pb-6 mb-3  md:mb-6 mt-6  md:mt-10">
-          <p class="text-lg  md:text-3xl font-bold text-[#082867] flex-1">{{
-            t('pages.careersDetail.jobResponse') }}</p>
-        </div>
-        <div class="text-base md:text-xl leading-relaxed tracking-widest">
-          <div v-html="formatJobResponse(jobDetail?.jobResponse)" class="job-responsibilities"></div>
-        </div>
-        <div
-          class="flex items-center gap-3 md:gap-6 border-b border-[#1A2E56] pb-3  md:pb-6 mb-3 md:mb-6 mt-6  md:mt-10">
-          <p class="text-lg  md:text-3xl font-bold text-[#082867] flex-1">{{
-            t('pages.careersDetail.jobCondition') }}</p>
-        </div>
-        <div class="text-base md:text-xl leading-relaxed tracking-widest">
-          <div v-html="formatJobResponse(jobDetail?.jobCondition)" class="job-responsibilities  job-condition"></div>
-        </div>
-        <div
-          class="flex items-center gap-3 md:gap-6 border-b border-[#1A2E56] pb-3 md:pb-6 mb-3 md:mb-6 mt-6  md:mt-10">
-          <p class="text-lg  md:text-3xl font-bold text-[#082867] flex-1">{{
-            t('pages.careersDetail.applyWay') }}</p>
-        </div>
-        <div class="text-base md:text-xl leading-relaxed tracking-widest ">
-          <div v-html="formatJobResponse(jobDetail?.applyWay)" class="job-responsibilities"></div>
-        </div>
-        <div class="flex items-center gap-3 md:gap-6 border-b border-[#1A2E56] pb-3 md:pb-6 mb-3  md:mb-6 mt-6 md:mt-10">
-          <p class="text-lg  md:text-3xl font-bold text-[#082867] flex-1">{{
-            t('pages.careersDetail.companyDescription') }}</p>
-        </div>
-        <div class="text-base md:text-xl leading-relaxed tracking-widest mb-10">
-          <div v-html="formatJobResponse(jobDetail?.companyDescription)" class="job-responsibilities text-algin-justify"></div>
-        </div>
-      </Container>
-    </section>
-  </PageWrapper>
+    </div>、
+    <div class=" py-20">
+      <div class="flex items-center gap-6 border-b border-[#072867] pl-4 pb-4 my-10 ">
+        <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.careersDetail.jobCondition') }}</span>
+      </div>
+      <div class="text-base md:text-xl leading-relaxed tracking-widest px-10">
+        <div v-html="formatJobResponse(jobDetail?.jobResponse)" class="job-responsibilities"></div>
+      </div>
+      <div class="flex items-center gap-6 border-b border-[#072867] pl-4 pb-4 my-10 ">
+        <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.careersDetail.applyWay') }}</span>
+      </div>
+      <div class="text-base md:text-xl leading-relaxed tracking-widest px-10">
+        <div v-html="formatJobResponse(jobDetail?.jobCondition)" class="job-responsibilities  job-condition"></div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">

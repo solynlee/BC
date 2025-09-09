@@ -1,7 +1,7 @@
 export default {
   pages: {
     news: {
-      title: 'Newsroom',
+      title: 'News Center',
       title2: '',
       title3: 'See you in a week',
       title4: 'Ta kung Pao',

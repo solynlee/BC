@@ -14,7 +14,7 @@
     <div class="relative">
       <div class="pl-60 pt-80">
         <p class="text-[#072867] text-2xl w-102">{{ t('pages.careers.desc') }}</p>
-        <div class="flex items-center gap-4 mt-13 mb-30 cursor-pointer">
+        <div class="flex items-center gap-4 mt-13 mb-30 cursor-pointer" @click="router.push('/careers/acquisition')">
           <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
             <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -29,9 +29,9 @@
       <img src="@/assets/images/careers/image2.png" alt="" srcset="" class="w-full h-auto">
     </div>
     <div class="px-38 py-30">
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.careers.desc2') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.careers.desc2') }}</span>
       </div>
       <div class="px-10 py-16 grid grid-cols-3 gap-4">
         <div class="bg-white p-10 flex flex-col" v-for="item in list" :key="item.id">
@@ -41,7 +41,8 @@
           </p>
           <div class="flex items-center justify-between gap-4">
             <p class="text-2xl text-[#072867] opacity-60 line-clamp-1 "> {{ item.workPlace }}</p>
-            <div class="flex items-center gap-4  cursor-pointer">
+            <div class="flex items-center gap-4  cursor-pointer"
+              @click="router.push({ name: 'careersDetail', query: { code: item.jobCode } })">
               <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                 <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -58,9 +59,11 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 const { t } = useI18n()
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
+const router = useRouter()
 interface Job {
   id: string,
   jobTitle: string

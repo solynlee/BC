@@ -17,9 +17,9 @@
         {{ t('pages.insights.banner.desc3') }}
       </div>
       <div class="mt-28 ">
-        <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+        <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
           <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-          <span class="text-[#001949] text-4xl font-bold">{{ t('pages.insights.title1') }}</span>
+          <span class="text-[#072867] text-4xl font-bold">{{ t('pages.insights.title1') }}</span>
         </div>
         <div class="mt-10 p-4 h-200 relative" v-if="teamList1 && teamList1.length > 0">
           <img :src="teamList1?.[0].conver" alt="" srcset="" class="w-240">
@@ -27,7 +27,8 @@
             <p class="text-[#072867] font-bold text-3xl line-clamp-2">{{ teamList1?.[0].title }}</p>
             <p class="text-[#072867] text-2xl mt-10 mb-15 line-clamp-5">
               {{ teamList1?.[0].abstract }}</p>
-            <div class="flex items-center gap-4 mt-8 cursor-pointer">
+            <div class="flex items-center gap-4 mt-8 cursor-pointer"
+              @click="router.push({ name: 'insightsDetail', query: { code: teamList1?.[0].articleCode } })">
               <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                 <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -46,9 +47,10 @@
               <div>
                 <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
                 </p>
-                <p class="text-[#001949] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
               </div>
-              <div class="flex items-center gap-4 mt-8 cursor-pointer">
+              <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                @click="router.push({ name: 'insightsDetail', query: { code: item.articleCode } })">
                 <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                   <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -62,9 +64,9 @@
 
       </div>
       <div class="mt-28 ">
-        <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4">
+        <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
           <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-          <span class="text-[#001949] text-4xl font-bold">{{ t('pages.insights.title2') }}</span>
+          <span class="text-[#072867] text-4xl font-bold">{{ t('pages.insights.title2') }}</span>
         </div>
         <template v-if="teamList2 && teamList2.length > 0">
 
@@ -75,7 +77,8 @@
               <p class="text-[#072867] font-bold text-3xl line-clamp-2">{{ teamList2?.[0].title }}</p>
               <p class="text-[#072867] text-2xl mt-10 mb-15 line-clamp-5">
                 {{ teamList2?.[0].abstract }}</p>
-              <div class="flex items-center gap-4 mt-8 cursor-pointer">
+              <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                @click="router.push({ name: 'insightsDetail', query: { code: teamList2?.[0].articleCode } })">
                 <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                   <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -93,9 +96,10 @@
               <div>
                 <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
                 </p>
-                <p class="text-[#001949] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
               </div>
-              <div class="flex items-center gap-4 mt-8 cursor-pointer">
+              <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                @click="router.push({ name: 'insightsDetail', query: { code: item.articleCode } })">
                 <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
                   <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -118,6 +122,7 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n'
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
+import { useRouter } from 'vue-router';
 const { t, locale } = useI18n()
 
 const isEn = computed(() => locale.value === 'en')
@@ -126,9 +131,10 @@ interface TeamItem {
   title: string
   abstract: string
   conver: string
-  content: string
+  content: string,
+  articleCode: string
 }
-
+const router = useRouter()
 
 const { data: teamList1 } = useCustomApiWithAutoRefresh<TeamItem[]>(() => api.get({
   url: '/article/list',

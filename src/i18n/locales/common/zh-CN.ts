@@ -29,7 +29,7 @@ export default {
     proposition: '资质与合规',
     team: '管理团队',
     value: '拔萃慈善基金会',
-    license: '牌照',
+    license: '公司及牌照',
   },
   footer: {
     btn: '免责声明',

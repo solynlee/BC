@@ -31,16 +31,20 @@
         @click="router.push({ name: 'value' })">
         {{ t('pages.about.tab.tab4') }}
       </p>
+      <p class="w-80 h-20 flex items-center justify-center opacity-40  bg-[#334CA8] cursor-pointer"
+        @click="router.push({ name: 'licenses' })">
+        {{ t('pages.about.tab.tab5') }}
+      </p>
     </div>
 
     <div class="px-38 py-20">
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.proposition.institutions.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.proposition.institutions.title') }}</span>
       </div>
       <div class="p-8 flex justify-between gap-8 text-[#0E285C] text-xl">
         <div class="flex flex-col flex-1">
-          <img src="@/assets/images/about/proposition/image1.png" alt="" srcset="">
+          <img :src="imageUrl1" alt="" srcset="">
           <div class="py-6 px-6 border-l border-[#072766]">
             <p>{{ t('pages.proposition.institutions.item1.desc1') }}</p>
             <p>{{ t('pages.proposition.institutions.item1.desc2') }}</p>
@@ -50,35 +54,35 @@
           </div>
         </div>
         <div class="flex flex-col flex-1">
-          <img src="@/assets/images/about/proposition/image2.png" alt="" srcset="" class="w-full h-auto">
+          <img :src="imageUrl2" alt="" srcset="" class="w-full h-auto">
           <div class="py-6 pl-6 pr-8 border-l border-[#072766] flex-1">
             <p>{{ t('pages.proposition.institutions.item2.desc1') }}</p>
           </div>
         </div>
         <div class="flex flex-col flex-1">
-          <img src="@/assets/images/about/proposition/image3.png" alt="" srcset="" class="w-full h-auto">
+          <img :src="imageUrl3" alt="" srcset="" class="w-full h-auto">
           <div class="py-6  pl-6 pr-8 border-l border-[#072766] flex-1">
             <p>{{ t('pages.proposition.institutions.item3.desc1') }}</p>
           </div>
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.proposition.compliance.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.proposition.compliance.title') }}</span>
       </div>
       <p class="text-xl text-[#0E285C] px-20 ">{{ t('pages.proposition.compliance.desc') }}</p>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.proposition.standard.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.proposition.standard.title') }}</span>
       </div>
       <p class="text-xl text-[#0E285C] px-20 ">{{ t('pages.proposition.standard.desc') }}</p>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.proposition.transparency.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.proposition.transparency.title') }}</span>
       </div>
       <p class="text-xl text-[#0E285C] px-20 ">{{ t('pages.proposition.transparency.desc') }}</p>
       <div class="p-20 flex items-center gap-20">
-        <img src="@/assets/images/about/proposition/image4.png" alt="" srcset="" class="w-180 h-auto">
+        <img src="@/assets/images/about/proposition/image10.png" alt="" srcset="" class="w-180 h-auto">
         <p class="text-xl text-[#0E285C]  pr-12" :class="{ '!pr-1': isEn }">{{ t('pages.proposition.content') }}</p>
       </div>
     </div>
@@ -91,6 +95,43 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router';
 const { t, locale } = useI18n()
+import image1 from '@/assets/images/about/proposition/image1.png'
+import image2 from '@/assets/images/about/proposition/image2.png'
+import image3 from '@/assets/images/about/proposition/image3.png'
+import image4 from '@/assets/images/about/proposition/image4.png'
+import image5 from '@/assets/images/about/proposition/image5.png'
+import image6 from '@/assets/images/about/proposition/image6.png'
+import image7 from '@/assets/images/about/proposition/image7.png'
+import image8 from '@/assets/images/about/proposition/image8.png'
+import image9 from '@/assets/images/about/proposition/image9.png'
+
+const imageUrl1 = computed(() => {
+  if (locale.value === 'zh-CN') {
+    return image1;
+  } else if (locale.value === 'zh-TW') {
+    return image4;
+  } else {
+    return image7;
+  }
+})
+const imageUrl2 = computed(() => {
+  if (locale.value === 'zh-CN') {
+    return image2;
+  } else if (locale.value === 'zh-TW') {
+    return image5;
+  } else {
+    return image8;
+  }
+})
+const imageUrl3 = computed(() => {
+  if (locale.value === 'zh-CN') {
+    return image3;
+  } else if (locale.value === 'zh-TW') {
+    return image6;
+  } else {
+    return image9;
+  }
+})
 
 const router = useRouter()
 

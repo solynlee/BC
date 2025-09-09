@@ -15,7 +15,8 @@ export default {
         tab1: `Corporate Culture`,
         tab2: `Team`,
         tab3: `Credentials and Compliance`,
-        tab4: `BC Philanthropic Foundation`
+        tab4: `BC Philanthropic Foundation`,
+        tab5: `BC Capital Subsidiary Corporation & Licenses`
       },
       culture: {
         title: 'Brand Culture',
@@ -35,32 +36,29 @@ export default {
       honors: `Honors and Awards`
     },
     licenses: {
-      title: '核心价值主张',
-      title1: 'Core Value Proposition',
-      subtitle: '德行天下，才萃八方',
-      intro: `拔萃财富集团以卓越的专业能力和全球化的战略视野，致力于为高净值个人、家族及企业打造全方位、多元化的财富管理方案。由阿里巴巴集团部分创始股东、三捷投资集团有限公司及中港两地资深金融专业人士联合创立，拔萃财富以多家族办公室业务为核心，秉承“保障财富安全，传承财富价值”的使命，为客户提供一站式高端财富管理服务。`,
-      philosophy: {
-        title: '公司以“德行天下，才萃八方”为核心价值主张',
-        items: [
-          {
-            name: '德行天下',
-            desc: '以道德为根基，企业价值观（诚信、责任、正道）核心体现，将道德实践贯穿于全球业务。'
-          },
-          {
-            name: '才萃八方',
-            desc: '以专业能力与稀缺资源（金融人才、跨境架构、投资机会）汇聚四方精英与全球资源。'
-          }
-        ]
+      title: 'BC Capital Subsidiary Corporation & Licenses',
+      table: {
+        col1: `Corporation`,
+        col2: `Relationship`,
+        col3: `License`,
+        col4: `Service`,
       },
-      groupValue: {
-        title: '拔萃财富集团 ',
-        title1: '您身边的财富管理专家',
-        title2: '',
-        desc: `在拔萃财富集团，我们深知财富不仅是资产数字，更是客户信任的托付与人生价值的承载。因此，我们始终将安全性、私密性与可延续性贯穿于服务全流程。我们以科技捍卫安全，以专业恪守私密，以远见铸就延续——让财富在时间维度中稳健生长，让信任在世代更迭间历久弥新。`
-      }
+      asset: {
+        col1: `BC Global Asset Management Limited`,
+        col2: `BC Global Asset Management Limited is wholly owned by BC Capital Group, formed and registered in Hong Kong.`,
+        col3: `Licensed corporation under the Securities and Futures Ordinance licensed to conduct Type 1 (Dealing in securities), Type 4 (Advising on securities) and Type 9 (Asset management) regulated activities (CE No.: BFT176).`,
+        col4: `BC Global Asset Management Limited provides fixed income funds, alternative investment funds, and private equity fund services.`,
+      },
+      capital: {
+        col1: `Bacui Capital Management Pte. Ltd.`,
+        col2: `Bacui Capital Management Pte. Ltd. is wholly owned by BC Capital Group, formed and registered in Hong Kong.`,
+        col3: `Capital Market Services License under the Securities and Futures Act licensed to conduct Fund Management and Advising on Investment Products activities in Singapore (License No: CMS101213).`,
+        col4: `Bacui Capital Management Pte. Ltd. provides fund management and financial advisory services.`,
+      },
+      disclaimer: `The information on this website is for professional investors only, and is not and should not be regarded as an offer, solicitation, invitation or recommendation to buy or sell any investment products or the basis for investment decisions, nor should it be construed as professional advice. All third-party logos, brands, or trademarks displayed on this website are for identification purposes only and remain the property of their respective owners. Images are for illustrative purposes only and do not constitute any investment advice or guarantee. Any investment involves risks, please fully understand the characteristics and risks of the service. Persons who read the contents of this website or make any investment decisions should fully understand the risks and the relevant legal, taxation and accounting features and consequences, determine whether the investment is suitable for their financial situation and investment objectives, and whether they can bear the relevant risks according to their personal circumstances, seek appropriate professional advice if necessary, and should not rely on the reference materials provided on this website.`
     },
     team: {
-      title: '管理团队',
+      title: 'Team',
       title1: 'Management Team',
       desc: `BC Capital brings together seasoned leaders from the world's premier investment firms, fund companies, and banks, with an average of 15+ years industry experience. We deliver cross-border asset allocation solutions for high-net-worth individuals and institutions.`,
       Sun: {
@@ -82,13 +80,13 @@ export default {
       manag: `Team`
     },
     value: {
-      title: '资质与合规',
+      title: 'BC Philanthropic Foundation',
       title1: 'Professional Qualifications and Compliance',
       desc: `Officially obtained tax-exempt status from Hong Kong Inland Revenue Department!`,
       desc2: `Rooted in Hong Kong, we are dedicated to helping special youth groups suffering from autism, depression, ADHD, etc. Through financial assistance (Dream Builder Fund), professional support networks, and psychological care, we illuminate lives in need. This approval is both an honor and a responsibility. We cordially invite you to join the [Ray of Light Initiative] and become a "Light Partner"—let’s build a path of hope together and witness lives blossoming toward the sun!`,
     },
     proposition: {
-      title: '拔萃财富集团公司及牌照',
+      title: 'Credentials and Compliance',
       title1: 'DC Wealth Group Subsidiary Corporation & Licenses',
       desc: `The group has always adhered to compliance as its core principle, strictly abiding by relevant laws and regulations of the financial services industry in Hong Kong and internationally. As a licensed institution, BC Capital leverages its outstanding compliance management system and professional team to provide clients with secure, transparent, and efficient asset management services.`,
       institutions: {
@@ -121,6 +119,46 @@ export default {
         desc: `BC Capital adheres to the principle of information transparency, regularly disclosing investment portfolio performance and market dynamics to clients, ensuring that clients can clearly understand the status of asset operations. At the same time, client assets are always independently held in accounts at top international banks, providing multiple layers of security.`
       },
       content: `With full-spectrum licenses, institutional-grade compliance, and proven risk controls, BC Capital is your trusted global asset management partner.`
+    },
+    culture: {
+      title: 'Brand Culture',
+      title2: '',
+      genes: {
+        title: 'Our Cultural DNA',
+        desc: `At BC Capital, our core values—"Compliance & Integrity, People-Centric, Long-Term Win-Win, Continuous Innovation"—guide our mission to be your trusted wealth partner in worldwide scale. For twelve years, this cultural ethos has infused every decision we make and every service we deliver.`,
+      },
+      item1: {
+        title: `Compliance & Integrity`,
+        desc: `"Creating value within boundaries, earning trust above thresholds"`,
+        desc2: ``,
+        title2: 'Essence',
+        desc3: `Risk management as our bedrock, professionalism as our compass`,
+        desc4: ``,
+      },
+      item2: {
+        title: `People-Centric`,
+        desc: `"Empowering professionals, safeguarding legacies"`,
+        desc2: ``,
+        title2: 'Essence',
+        desc3: `Elite talent drives excellence, client needs anchor our actions`,
+        desc4: ``,
+      },
+      item3: {
+        title: `Long-Term Shared Success`,
+        desc: `"Time is the ultimate risk manager, shared success the deepest bond"`,
+        desc2: ``,
+        title2: 'Essence',
+        desc3: `Rejecting short-termism, compounding sustainable value`,
+        desc4: ``,
+      },
+      item4: {
+        title: `Continuous Innovation`,
+        desc: `"Venturing boldly with principled caution"`,
+        desc2: ` `,
+        title2: 'Essence',
+        desc3: `Pioneering within regulatory guardrails`,
+        desc4: ``,
+      },
     },
   },
 } as const

@@ -22,7 +22,58 @@
             </div>
           </div>
         </div>
-
+        <div class="p-10" v-if="showTable">
+          <table class="w-full border-collapse border border-[#b9a495] table-fixed">
+            <colgroup>
+              <col class="w-1/6">
+              <col class="w-1/4">
+              <col class="w-1/3">
+              <col class="w-1/4">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="text-2xl  py-4 font-bold text-center bg-[#a28672] text-white">
+                  {{ t('pages.licenses.table.col1') }}
+                </th>
+                <th class="text-2xl  py-4 font-bold text-center bg-[#a28672] text-white">
+                  {{ t('pages.licenses.table.col2') }}
+                </th>
+                <th class="text-2xl  py-4 font-bold text-center bg-[#a28672] text-white">
+                  {{ t('pages.licenses.table.col3') }}
+                </th>
+                <th class="text-2xl  py-4 font-bold text-center bg-[#a28672] text-white">
+                  {{ t('pages.licenses.table.col4') }}
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-[#002e68]">
+              <tr>
+                <td class="text-2xl font-bold p-4 px-10 border-r border-b border-[#b9a495] text-center ">
+                  {{ t('pages.licenses.asset.col1') }}</td>
+                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.asset.col2') }}</td>
+                <td class="text-xl p-4 border-r border-b border-[#b9a495] text-algin-justify">{{
+                  t('pages.licenses.asset.col3') }}</td>
+                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.asset.col4') }}</td>
+              </tr>
+              <tr>
+                <td class="text-2xl font-bold p-4 px-10 border-r border-b border-[#b9a495] text-center ">
+                  {{ t('pages.licenses.capital.col1') }}</td>
+                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.capital.col2') }}</td>
+                <td class="text-xl p-4 border-r border-b border-[#b9a495] text-algin-justify">{{
+                  t('pages.licenses.capital.col3') }}</td>
+                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.capital.col4') }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4"
+                  class="text-xl text-[#727e9b] italic p-4 border-r border-b border-[#a28672] text-algin-justify">
+                  {{ t('pages.licenses.disclaimer') }}
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
         <!-- 免责声明 -->
         <div class="flex justify-center items-center flex-col">
           <p @click="showDisclaimer"
@@ -43,8 +94,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import DisclaimerModal from '@/components/DisclaimerModal.vue'
-import { ref } from 'vue'
-
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+const showTable = ref(false)
 const { t } = useI18n()
 const disclaimerModalRef = ref<InstanceType<typeof DisclaimerModal> | null>(null)
 const showDisclaimer = () => {
@@ -52,6 +104,16 @@ const showDisclaimer = () => {
     disclaimerModalRef.value.showDisclaimer()
   }
 }
+const route = useRoute()
+watch(() => route.name, (newVal) => {
+
+  if (newVal === 'home') {
+    showTable.value = true
+  } else {
+    showTable.value = false
+  }
+}, { immediate: true })
+
 
 </script>
 

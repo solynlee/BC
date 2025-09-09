@@ -9,25 +9,25 @@
       </div>
     </div>
     <div class="px-34 py-20">
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 my-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 my-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.company.focused.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.company.focused.title') }}</span>
       </div>
       <div class="px-4 leading-10">
         <p class="text-[#082867] text-[23px]">{{ t('pages.company.focused.desc') }}</p>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.company.strengths.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.company.strengths.title') }}</span>
       </div>
       <div class="px-4 leading-10">
 
         <p class="text-[#082867] text-[23px]">{{ t('pages.company.strengths.desc') }}</p>
 
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20  mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20  mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.company.investment.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.company.investment.title') }}</span>
       </div>
       <div class="px-4 leading-10">
         <p class="text-[#082867] text-[23px]">{{ t('pages.company.investment.desc') }}</p>

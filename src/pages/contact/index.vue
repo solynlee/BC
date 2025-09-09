@@ -12,9 +12,9 @@
       <p class="text-[#0B2859] opacity-60 pl-170 text-2xl pr-39 py-12">{{ t('pages.contact.desc') }}</p>
     </div>
     <div class="px-38 ">
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.contact.hk.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.contact.hk.title') }}</span>
       </div>
       <div class="py-10 flex justify-end relative">
         <div class="bg-white shadow px-10 py-20 absolute left-0 top-1/2 -translate-y-1/2 w-120 z-10">
@@ -33,9 +33,9 @@
           <MapComponent :location="location1" height="100%" width="100%" :zoom="16" class="h-full w-full" />
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.contact.singapore.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.contact.singapore.title') }}</span>
       </div>
       <div class="py-10 flex justify-end relative">
         <div class="bg-white shadow px-10 py-20 absolute left-0 top-1/2 -translate-y-1/2 w-120 z-10">
@@ -56,9 +56,9 @@
             class="h-full w-full" />
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.contact.china.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.contact.china.title') }}</span>
       </div>
 
       <div class="py-10 flex justify-end relative">

@@ -5,24 +5,24 @@
       <div class="absolute bottom-0 left-0 w-full flex items-center justify-center flex-col">
         <p class="text-white text-7xl font-bold mb-18">{{ t('pages.home.banner.title') }}</p>
         <div class="flex items-start justify-around w-full  pb-12">
-          <div class="data-block border-r w-70">
+          <div class="data-block border-r w-70" :class="{ '!h-60': isEn }">
             <p class="data-title">{{ t('pages.home.banner.stats.wealthManagement') }}</p>
             <p class="data-description">{{ t('pages.home.banner.stats.wealthManagementDesc') }}</p>
           </div>
-          <div class="data-block border-r  w-70">
+          <div class="data-block border-r  w-70" :class="{ '!h-60': isEn }">
             <p class="data-title">{{ t('pages.home.banner.stats.years') }}</p>
             <p class="data-description">{{ t('pages.home.banner.stats.yearsDesc') }}</p>
           </div>
-          <div class="data-block border-r flex-1">
+          <div class="data-block border-r w-100" :class="{ '!h-60': isEn }">
             <p class="data-title">{{ t('pages.home.banner.stats.regions') }}</p>
             <p class="data-description">{{ t('pages.home.banner.stats.regionsDesc') }}<br>{{
               t('pages.home.banner.stats.regionsDesc2') }}</p>
           </div>
-          <div class="data-block border-r w-54">
+          <div class="data-block border-r w-54" :class="{ '!h-60': isEn }">
             <p class="data-title">{{ t('pages.home.banner.stats.partnerInstitutions') }}</p>
             <p class="data-description">{{ t('pages.home.banner.stats.partnerInstitutionsDesc') }}</p>
           </div>
-          <div class="data-block flex-1">
+          <div class="data-block flex-1" :class="{ '!h-60': isEn }">
             <p class="data-title">{{ t('pages.home.banner.stats.licenses') }}</p>
             <p class="data-description">
               {{ t('pages.home.banner.stats.licensesDesc') }}<br>{{ t('pages.home.banner.stats.licensesDesc2') }}<br>{{
@@ -170,7 +170,7 @@
         {{ t('pages.home.choose.content') }}<br />
         {{ t('pages.home.choose.content2') }}</p>
       <div class="grid grid-cols-3 gap-15 mt-5 px-30">
-        <div class="text-center cursor-pointer h-full pt-20">
+        <div class="text-center cursor-pointer h-full pt-20" @click="router.push('/about/culture')">
           <div class="flex-1 mx-auto mb-8">
             <img src="@/assets/images/home/image5.png" alt="" srcset="" class="w-full h-auto aspect-4-3 ">
           </div>
@@ -184,7 +184,7 @@
           <div class="flex-1 mx-auto mb-8 relative">
             <img src="@/assets/images/home/image6.png" alt="" srcset="" class="w-full h-auto aspect-4-3 ">
             <div class="absolute bottom-0 left-0 w-full h-ful text-white px-8 pb-20 cursor-pointer"
-              @click="router.push('/about')">
+              @click="router.push('/about/team')">
               <div class="h-1 w-20 bg-[#A37B24] mx-auto mb-4"></div>
               <p class="text-3xl font-bold mb-5">{{
                 t('pages.home.choose.choose2.title') }}</p>
@@ -201,7 +201,7 @@
           </div>
 
         </div>
-        <div class="text-center cursor-pointer h-full pt-20">
+        <div class="text-center cursor-pointer h-full pt-20" @click="router.push('/about/proposition')">
           <div class="flex-1 mx-auto mb-8">
             <img src="@/assets/images/home/image7.png" alt="" srcset="" class="w-full h-auto aspect-4-3 ">
           </div>

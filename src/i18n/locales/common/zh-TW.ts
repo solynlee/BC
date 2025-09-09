@@ -28,7 +28,7 @@ export default {
     proposition: '資質與合規',
     team: '管理團隊',
     value: '拔萃慈善基金會',
-    license: '營業執照',
+    license: '公司及牌照',
   },
   footer: {
     btn: '免責聲明',

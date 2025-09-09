@@ -31,6 +31,10 @@
         @click="router.push({ name: 'value' })">
         {{ t('pages.about.tab.tab4') }}
       </p>
+      <p class="w-80 h-20 flex items-center justify-center opacity-40  bg-[#334CA8] cursor-pointer"
+        @click="router.push({ name: 'licenses' })">
+        {{ t('pages.about.tab.tab5') }}
+      </p>
     </div>
     <div class="my-20 px-38 relative mb-25">
       <div class="p-8 relative">
@@ -48,26 +52,26 @@
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-14">
       </p>
       <div class="px-44 mt-15 flex gap-4">
-        <div class="flex-1 text-center bg-white shadow-xs">
+        <div class="flex-1 text-center bg-white shadow-xs cursor-pointer" @click="router.push({ name: 'culture' })">
           <img src="@/assets/images/about/image2.png" alt="" srcset="" class="w-full h-auto">
           <p class="text-[#345CAC] text-4xl">{{ t('pages.about.culture.desc1') }}</p>
           <p class="text-[#0E285C] text-2xl my-10">{{ t('pages.about.culture.content1') }}<br />{{
             t('pages.about.culture.content2') }}</p>
         </div>
-        <div class="flex-1 text-center bg-white shadow-xs">
+        <div class="flex-1 text-center bg-white shadow-xs cursor-pointer" @click="router.push({ name: 'culture' })">
           <img src="@/assets/images/about/image3.png" alt="" srcset="" class="w-full h-auto">
           <p class="text-[#345CAC] text-4xl" :class="{ 'h-[5rem]': isEn }">{{ t('pages.about.culture.desc2') }}</p>
           <p class="text-[#0E285C] text-2xl my-10">{{ t('pages.about.culture.content3') }}<br />{{
             t('pages.about.culture.content4') }}</p>
         </div>
 
-        <div class="flex-1 text-center bg-white shadow-xs">
+        <div class="flex-1 text-center bg-white shadow-xs cursor-pointer" @click="router.push({ name: 'culture' })">
           <img src="@/assets/images/about/image4.png" alt="" srcset="" class="w-full h-auto">
           <p class="text-[#345CAC] text-4xl">{{ t('pages.about.culture.desc3') }}</p>
           <p class="text-[#0E285C] text-2xl my-10">{{ t('pages.about.culture.content5') }}<br />{{
             t('pages.about.culture.content6') }}</p>
         </div>
-        <div class="flex-1 text-center bg-white shadow-xs">
+        <div class="flex-1 text-center bg-white shadow-xs cursor-pointer" @click="router.push({ name: 'culture' })">
           <img src="@/assets/images/about/image5.png" alt="" srcset="" class="w-full h-auto">
           <p class="text-[#345CAC] text-4xl">{{ t('pages.about.culture.desc4') }}</p>
           <p class="text-[#0E285C] text-2xl my-10">{{ t('pages.about.culture.content7') }}<br />{{
@@ -83,7 +87,7 @@
           <span class="text-white text-5xl font-bold ">{{ t('pages.about.honors') }}</span>
           <img src="@/assets/images/home/rightArr2.png" alt="" srcset="" class="w-14">
         </p>
-        <img src="@/assets/images/about/image6.png" alt="" srcset="" class="w-full h-auto">
+        <img :src="images" alt="" srcset="" class="w-full h-auto">
       </div>
     </div>
   </div>
@@ -97,6 +101,19 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router';
 const { t, locale } = useI18n()
 
+import images6 from '@/assets/images/about/image6.png';
+import images7 from '@/assets/images/about/image7.png';
+import images8 from '@/assets/images/about/image8.png';
+
+const images = computed(() => {
+  if (locale.value === 'zh-CN') {
+    return images6;
+  } else if (locale.value === 'zh-TW') {
+    return images7;
+  } else {
+    return images8;
+  }
+})
 import mp4Url from '@/assets/video/2.mp4';
 import imgUrl from '@/assets/images/about/image1.png';
 const router = useRouter()

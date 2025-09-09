@@ -13,7 +13,7 @@ export default {
     home: 'Home',
     strategy: 'Investment Strategy',
     insights: 'Research and Insights',
-    news: 'Newsroom',
+    news: 'News Center',
     careers: 'Recruitment',
     about: 'About Us',
     contact: 'Contact Us',

@@ -13,9 +13,9 @@
         <img src="@/assets/images/strategy/trust/image1.png" alt="" srcset="" class="w-200 h-124 -translate-y-20">
         <p class="text-[#072867] text-2xl px-8 pb-20">{{ t('pages.trust.desc') }}</p>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 my-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 my-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.trust.focused.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.trust.focused.title') }}</span>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div class="bg-[#FFFFFF] text-center py-10">
@@ -39,9 +39,9 @@
             t('pages.trust.focused.desc9') }}</p>
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20 mb-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 mb-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.trust.strengths.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.trust.strengths.title') }}</span>
       </div>
       <div class="px-4 leading-10">
         <div class="flex items-center gap-4">
@@ -57,13 +57,13 @@
           <p class="text-[#082867] text-[23px]">{{ t('pages.trust.strengths.desc4') }}</p>
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 mt-20  mb-10">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20  mb-10">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.trust.investment.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.trust.investment.title') }}</span>
       </div>
     </div>
     <div class="bg-[#EAF0F8] pl-50 pr-34 py-10 flex items-center gap-16">
-      <img src="@/assets/images/strategy/trust/image2.png" alt="" srcset="" class="w-auto h-91">
+      <img :src="imageUrl2" alt="" srcset="" class="w-auto h-91">
       <div class="text-[#072867]">
         <p class="text-[#9F8570] text-[32px] font-bold">{{ t('pages.trust.investment.title2') }}</p>
         <div class="pt-6 pl-8 pr-8">
@@ -84,8 +84,22 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+const { t, locale } = useI18n()
+import image2 from '@/assets/images/strategy/trust/image2.png'
+import image3 from '@/assets/images/strategy/trust/image3.png'
+import image4 from '@/assets/images/strategy/trust/image4.png'
+
+const imageUrl2 = computed(() => {
+  if (locale.value === 'zh-CN') {
+    return image2;
+  } else if (locale.value === 'zh-TW') {
+    return image3;
+  } else {
+    return image4;
+  }
+})
 </script>
 
 <style scoped></style>

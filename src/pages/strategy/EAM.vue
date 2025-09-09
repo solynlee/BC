@@ -13,9 +13,9 @@
         <img src="@/assets/images/strategy/EAM/bg.png" alt="" srcset="" class="w-200 h-124 -translate-y-20">
         <p class="text-[#072867] text-2xl px-8 pb-40">{{ t('pages.EAM.desc') }}</p>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 my-10 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 my-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.EAM.focused.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.EAM.focused.title') }}</span>
       </div>
       <div class="text-[#072867] flex  items-center gap-5  mb-10">
         <img src="@/assets/images/strategy/EAM/icon1.png" alt="" srcset="" class="h-20">
@@ -45,9 +45,9 @@
           <p class="text-[23px]"> {{ t('pages.EAM.focused.desc5') }}</p>
         </div>
       </div>
-      <div class="flex items-center gap-4 border-b border-[#001949] pl-4 pb-4 my-20 ">
+      <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 my-20 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
-        <span class="text-[#001949] text-4xl font-bold">{{ t('pages.EAM.strengths.title') }}</span>
+        <span class="text-[#072867] text-4xl font-bold">{{ t('pages.EAM.strengths.title') }}</span>
       </div>
       <div class="text-[#072867] flex  items-center gap-5  mb-10">
         <img src="@/assets/images/strategy/EAM/icon5.png" alt="" srcset="" class="h-20">

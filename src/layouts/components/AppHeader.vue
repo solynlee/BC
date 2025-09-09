@@ -2,7 +2,7 @@
   <header id="page-top" class="relative bg-[#001a48]">
     <div class="flex justify-between items-center  px-10 py-8 pb-4 pl-14">
       <img src="@/assets/images/header/logo.png" alt="logo" class="h-16 w-auto">
-      <img src="@/assets/images/header/title.png" alt="logo" class="h-12 w-auto">
+      <img :src="titleUrl" alt="logo" class="w-[333px] ">
     </div>
     <div class="bg-[#072867] flex justify-between  px-10 items-center">
       <nav class="desktop-nav flex items-center  relative">
@@ -75,6 +75,22 @@ import CustomMenuItem from '@/components/CustomMenuItem.vue'
 import CustomSubMenu from '@/components/CustomSubMenu.vue'
 
 const { locale } = useI18n()
+
+import title from '@/assets/images/header/title.png'
+import titleEn from '@/assets/images/header/title3.png'
+import titleZhTW from '@/assets/images/header/title2.png'
+
+const titleUrl = computed(() => {
+
+  if (locale.value === 'zh-CN') {
+    return title;
+  } else if (locale.value === 'zh-TW') {
+    return titleZhTW;
+  } else {
+    return titleEn;
+  }
+})
+
 const route = useRoute()
 const router = useRouter()
 const languageStore = useLanguageStore()
@@ -121,6 +137,9 @@ const getActiveMenuPath = (path: string): string => {
   if (path.startsWith('/strategy/')) return '/strategy'
   if (path.startsWith('/about/')) return '/about'
   if (path.startsWith('/news/detail')) return '/news'
+  if (path.startsWith('/about/culture')) return '/about'
+  if (path.startsWith('/careers/acquisition')) return '/careers'
+  if (path.startsWith('/about/valueDetail')) return '/about'
   // 其他路由直接返回
   return path
 }
@@ -261,7 +280,7 @@ const navItems = [
       { path: '/about/proposition', label: 'nav.proposition' },
       { path: '/about/team', label: 'nav.team' },
       { path: '/about/value', label: 'nav.value' },
-      // { path: '/about/licenses', label: 'nav.license' }
+      { path: '/about/licenses', label: 'nav.license' }
     ]
   },
   { path: '/careers', label: 'nav.careers' },
@@ -327,7 +346,7 @@ const navItems = [
 
 /* 菜单项样式 */
 :deep(.dc-menu-item.custom-menu-item) {
-  padding: 10px 1rem !important;
+  padding: 10px !important;
   font-size: 24px;
   font-weight: normal;
   cursor: pointer;
@@ -390,7 +409,7 @@ const navItems = [
 :deep(.dc-submenu .custom-sub-menu__title) {
   font-size: 24px !important;
   font-weight: normal !important;
-  padding: 10px 1rem !important;
+  padding: 10px !important;
   text-align: center !important;
 
   border-bottom: 4px solid transparent !important;
