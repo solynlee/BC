@@ -25,7 +25,7 @@
     <div class="px-38 pb-30">
       <div class="mt-10 relative flex justify-end">
         <img src="@/assets/images/strategy/image1.png" alt="" srcset="" class="w-[56%]">
-        <div class="bg-white w-[54%] absolute top-1/2 left-0 translate-y-[-50%] p-10">
+        <div class="bg-white w-[50%] absolute top-1/2 left-0 translate-y-[-50%] p-10">
           <div class="flex items-center gap-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
             <p class="text-[#C1A894] text-4xl font-bold"> {{ t('pages.strategy.item.title1') }}</p>
@@ -51,7 +51,7 @@
       </div>
       <div class="mt-10 relative ">
         <img src="@/assets/images/strategy/image2.png" alt="" srcset="" class="w-[56%]">
-        <div class="bg-white w-[54%] absolute top-1/2 right-0 translate-y-[-50%] p-10">
+        <div class="bg-white w-[50%] absolute top-1/2 right-0 translate-y-[-50%] p-10">
           <div class="flex items-center gap-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
             <p class="text-[#C1A894] text-4xl font-bold"> {{ t('pages.strategy.item.title2') }}</p>
@@ -84,7 +84,7 @@
       </div>
       <div class="mt-10 relative flex justify-end">
         <img src="@/assets/images/strategy/image3.png" alt="" srcset="" class="w-[56%]">
-        <div class="bg-white w-[54%] absolute top-1/2 left-0 translate-y-[-50%] p-10">
+        <div class="bg-white w-[50%] absolute top-1/2 left-0 translate-y-[-50%] p-10">
           <p class="text-[#C1A894] text-4xl font-bold"> {{ t('pages.strategy.item.title3') }}</p>
           <p class="text-[#072867] text-2xl mt-6 py-4">
             {{ t('pages.strategy.item.desc6') }}</p>
