@@ -43,15 +43,15 @@ export default {
         content2: `management expertise to deliver sustainable long-term value for investors.`,
         fund1: {
           title: `Alternative Fixed-Incom`,
-          content: `Global Select Private Credit Fund of Funds (FOF) Portfolio`,
+          content: ``,
         },
         fund2: {
           title: `Fund of Funds (FoF) Solutions Suite`,
-          content: `One-click configuration of high-quality fund portfolios`,
+          content: ``,
         },
         fund3: {
           title: `Top-tier Specialized Fund Service`,
-          content: `Elite Global Quant Funds`,
+          content: ``,
         }
       },
       investment: {

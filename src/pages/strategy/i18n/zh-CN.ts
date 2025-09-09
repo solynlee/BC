@@ -31,7 +31,7 @@ export default {
     },
     office: {
       title: `优先劣后分级固定收益类基金系列`,
-      title2: `Changcui Optimal Return Fund SP`,
+      title2: ``,
       desc: `拔萃资本与大型国有企业全资香港持牌证券公司合作，共同设立并管理专项基金，为优先级投资者带来优于同期银行美元定期存款的固定目标收益，同时为劣后级投资者带来可接受风险等级下的超额回报。`,
       focused: {
         title: `策略聚焦`,
@@ -52,7 +52,7 @@ export default {
     },
     EAM: {
       title: `高净值客户外部资产管理（EAM）`,
-      title2: `External Asset Management`,
+      title2: ``,
       desc: `拔萃资本携手头部私人银行，为高净值客户打造高定制化、高透明度、高流动性的债券投资管理专户，精准匹配客户投资目标与风险偏好。`,
       focused: {
         title: `策略聚焦`,
@@ -77,7 +77,7 @@ export default {
     },
     trust: {
       title: `另类固收类基金`,
-      title2: `全球优选私募信贷FOF基金组合`,
+      title2: ``,
       desc: `本基金是一款为投资者量身打造的稳健收益产品，精选多只表现优异的私募信贷基金进行组合投资，特别适合首次接触另类投资及追求更高于银行存款收益的朋友。`,
       focused: {
         title: `投资亮点`,
@@ -115,7 +115,7 @@ export default {
     },
     business: {
       title: `母基金系列：一键配置优质对冲基金组合`,
-      title2: `全球优选稳健增长FOHF基金组合`,
+      title2: ``,
       focused: {
         title: `投资亮点`,
         title2: `绝对回报导向`,
@@ -153,7 +153,7 @@ export default {
     },
     company: {
       title: `顶级专项基金: 全球明星量化基金`,
-      title2: `精选专项基金`,
+      title2: ``,
       focused: {
         title: `投资亮点`,
         desc: `美股量化明星基金。`,
@@ -169,7 +169,7 @@ export default {
     },
     planning: {
       title: `私募股权投资`,
-      title2: `Private Equity`,
+      title2: ``,
       focused: {
         title: `项目资源`,
         desc: `与国际一流和区域顶级的基金管理人合作，获得顶级私募股权基金优先配售权和优质项目共同投资专项额度。`,

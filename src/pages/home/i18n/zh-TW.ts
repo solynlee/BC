@@ -43,15 +43,15 @@ export default {
         content2: `致力於為投資者創造可持續的長期價值`,
         fund1: {
           title: `另類固收基金`,
-          content: `全球優選私募信貸FOF基金組合`,
+          content: ``,
         },
         fund2: {
           title: `母基金系列`,
-          content: `一鍵配置優質基金組合`,
+          content: ``,
         },
         fund3: {
           title: `頂級專項基金系列`,
-          content: `全球明星量化基金`,
+          content: ``,
         }
       },
       investment: {

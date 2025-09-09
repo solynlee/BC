@@ -43,15 +43,15 @@ export default {
         content2: `致力于为投资者创造可持续的长期价值`,
         fund1: {
           title: `另类固收基金`,
-          content: `全球优选私募信贷FOF基金组合`,
+          content: ``,
         },
         fund2: {
           title: `母基金系列`,
-          content: `一键配置优质基金组合`,
+          content: ``,
         },
         fund3: {
           title: `顶级专项基金系列`,
-          content: `全球明星量化基金`,
+          content: ``,
         }
       },
       investment: {
