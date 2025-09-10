@@ -12,13 +12,13 @@
 
           <!-- 右侧二维码 -->
           <div class="flex gap-5 text-center text-[#0c2b57]">
-            <div>
-              <img src="@/assets/images/footer/code.png" alt="关注二维码" class="w-30  bg-[#0c2b57] h-auto mb-4">
-              <p>关注二维码</p>
-            </div>
-            <div>
-              <img src="@/assets/images/footer/code.png" alt="" class="w-30 bg-[#0c2b57] h-auto mb-4">
-              <p>关注公众号</p>
+            <div class="flex items-center justify-end gap-2">
+              <div class="text-right">
+                <p class="text-[#A37B24] text-2xl">Fllow US</p>
+                <p>{{ t(`footer.Follow2`) }}</p>
+              </div>
+              <img src="@/assets/images/footer/code1.png" alt="关注二维码" class="w-30   h-auto mb-2">
+              <img src="@/assets/images/footer/code2.png" alt="" class="w-30 h-auto mb-2">
             </div>
           </div>
         </div>
@@ -26,8 +26,8 @@
           <table class="w-full border-collapse border border-[#b9a495] table-fixed">
             <colgroup>
               <col class="w-1/6">
-              <col class="w-1/4">
-              <col class="w-1/3">
+              <col class="w-1/6">
+              <col class="w-5/12">
               <col class="w-1/4">
             </colgroup>
             <thead>
@@ -48,20 +48,29 @@
             </thead>
             <tbody class="text-[#002e68]">
               <tr>
-                <td class="text-2xl font-bold p-4 px-10 border-r border-b border-[#b9a495] text-center ">
+                <td class="text-2xl font-bold p-4 px-6 border-r border-b border-[#b9a495] text-center ">
                   {{ t('pages.licenses.asset.col1') }}</td>
-                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.asset.col2') }}</td>
-                <td class="text-xl p-4 border-r border-b border-[#b9a495] text-algin-justify">{{
+                <td class="text-xl py-4 px-6 border-r border-b border-[#b9a495] text-algin-justify">{{
+                  t('pages.licenses.asset.col2') }}
+                </td>
+                <td class="text-xl p-4 px-6 border-r border-b border-[#b9a495] text-algin-justify">{{
                   t('pages.licenses.asset.col3') }}</td>
-                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.asset.col4') }}</td>
+                <td class="text-xl p-4 px-6 border-r border-b border-[#b9a495] text-algin-justify">{{
+                  t('pages.licenses.asset.col4') }}
+                </td>
               </tr>
               <tr>
-                <td class="text-2xl font-bold p-4 px-10 border-r border-b border-[#b9a495] text-center ">
+                <td class="text-xl font-bold p-4 px-10 border-r border-b border-[#b9a495] text-center "
+                  :class="{ '!text-2xl': isEn }">
                   {{ t('pages.licenses.capital.col1') }}</td>
-                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.capital.col2') }}</td>
-                <td class="text-xl p-4 border-r border-b border-[#b9a495] text-algin-justify">{{
+                <td class="text-xl py-4 px-6 border-r border-b border-[#b9a495] text-algin-justify">{{
+                  t('pages.licenses.capital.col2') }}
+                </td>
+                <td class="text-xl p-4 px-6 border-r border-b border-[#b9a495] text-algin-justify">{{
                   t('pages.licenses.capital.col3') }}</td>
-                <td class="text-xl p-4 border-r border-b border-[#b9a495]">{{ t('pages.licenses.capital.col4') }}</td>
+                <td class="text-xl p-4 px-6 border-r border-b border-[#b9a495] text-algin-justify">{{
+                  t('pages.licenses.capital.col4') }}
+                </td>
               </tr>
             </tbody>
             <tfoot>
@@ -94,10 +103,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import DisclaimerModal from '@/components/DisclaimerModal.vue'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 const showTable = ref(false)
-const { t } = useI18n()
+const { t, locale } = useI18n()
+const isEn = computed(() => locale.value === 'en')
 const disclaimerModalRef = ref<InstanceType<typeof DisclaimerModal> | null>(null)
 const showDisclaimer = () => {
   if (disclaimerModalRef.value) {

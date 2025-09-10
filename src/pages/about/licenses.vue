@@ -2,11 +2,11 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/about/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] pl-10 pr-20 pt-30 text-white absolute top-30 w-120 left-46">
+      <div class="bg-[#072766] px-14  pt-30 text-white absolute top-30 w-130 left-40">
         <p class="text-6xl font-bold mb-4">{{ t('pages.about.banner.title') }}</p>
         <p class="text-4xl opacity-60">{{ t('pages.about.banner.title1') }}</p>
         <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-24"></div>
-        <p class="text-4xl font-bold mt-8 mb-30" :class="{ '!text-3xl  !leading-10': isEn }">{{
+        <p class="text-5xl font-bold mt-8 mb-30" :class="{ '!text-3xl  !leading-10': isEn }">{{
           t('pages.about.banner.desc') }} <br />{{
             t('pages.about.banner.desc3') }} <br />{{
             t('pages.about.banner.desc2') }} <br />{{
@@ -40,8 +40,8 @@
       <table class="w-full border-collapse border border-[#b9a495] table-fixed">
         <colgroup>
           <col class="w-1/6">
-          <col class="w-1/4">
-          <col class="w-1/3">
+          <col class="w-1/6">
+          <col class="w-5/12">
           <col class="w-1/4">
         </colgroup>
         <thead>
@@ -62,20 +62,25 @@
         </thead>
         <tbody class="text-[#002e68]">
           <tr>
-            <td class="text-2xl font-bold py-8 px-10 border-r border-b border-[#b9a495] text-center ">
+            <td class="text-2xl font-bold py-8 px-2 border-r border-b border-[#b9a495] text-center ">
               {{ t('pages.licenses.asset.col1') }}</td>
-            <td class="text-xl p-6 border-r border-b border-[#b9a495]">{{ t('pages.licenses.asset.col2') }}</td>
             <td class="text-xl p-6 border-r border-b border-[#b9a495] text-algin-justify">{{
+              t('pages.licenses.asset.col2') }}</td>
+            <td class="text-xl p-6 border-r border-b border-[#b9a495] ">{{
               t('pages.licenses.asset.col3') }}</td>
-            <td class="text-xl p-8 border-r border-b border-[#b9a495]">{{ t('pages.licenses.asset.col4') }}</td>
+            <td class="text-xl p-8 border-r border-b border-[#b9a495] text-algin-justify">{{
+              t('pages.licenses.asset.col4') }}</td>
           </tr>
           <tr>
-            <td class="text-2xl font-bold py-8 px-10 border-r border-b border-[#b9a495] text-center ">
+            <td class="text-xl font-bold py-8 px-10 border-r border-b border-[#b9a495] text-center "
+              :class="{ '!text-2xl': isEn }">
               {{ t('pages.licenses.capital.col1') }}</td>
-            <td class="text-xl p-6 border-r border-b border-[#b9a495]">{{ t('pages.licenses.capital.col2') }}</td>
+            <td class="text-xl p-6 border-r border-b border-[#b9a495] text-algin-justify">{{
+              t('pages.licenses.capital.col2') }}</td>
             <td class="text-xl p-6 border-r border-b border-[#b9a495] text-algin-justify">{{
               t('pages.licenses.capital.col3') }}</td>
-            <td class="text-xl p-8 border-r border-b border-[#b9a495]">{{ t('pages.licenses.capital.col4') }}</td>
+            <td class="text-xl p-8 border-r border-b border-[#b9a495] text-algin-justify">{{
+              t('pages.licenses.capital.col4') }}</td>
           </tr>
         </tbody>
         <tfoot>

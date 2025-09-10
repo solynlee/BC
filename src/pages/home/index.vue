@@ -144,7 +144,7 @@
         {{ t('pages.home.investment.content2') }}</p>
       <div class="mt-20 relative">
         <img src="@/assets/images/home/image4.png" alt="" srcset="" class="w-[56%]">
-        <div class="bg-white w-[54%] absolute top-1/2 right-0 translate-y-[-50%] p-10">
+        <div class="bg-white w-[50%] absolute top-1/2 right-0 translate-y-[-50%] p-10">
 
           <p class="text-[#072867] text-[21px]  mt-6">
             {{ t('pages.home.investment.desc') }}</p>

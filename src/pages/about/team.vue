@@ -2,11 +2,11 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/about/team/bg1.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] pl-10 pr-20 pt-30 text-white absolute top-30 w-120 left-46">
+      <div class="bg-[#072766] px-14  pt-30 text-white absolute top-30 w-130 left-40">
         <p class="text-6xl font-bold mb-4">{{ t('pages.about.banner.title') }}</p>
         <p class="text-4xl opacity-60">{{ t('pages.about.banner.title1') }}</p>
         <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-24"></div>
-        <p class="text-4xl font-bold mt-8 mb-30" :class="{ '!text-3xl  !leading-10': isEn }">{{
+        <p class="text-5xl font-bold mt-8 mb-30" :class="{ '!text-3xl  !leading-10': isEn }">{{
           t('pages.about.banner.desc') }} <br />{{
             t('pages.about.banner.desc3') }} <br />{{
             t('pages.about.banner.desc2') }} <br />{{

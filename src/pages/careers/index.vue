@@ -2,7 +2,7 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/careers/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] pl-14 pr-10 pt-30 text-white absolute top-29 w-120 left-50 ">
+      <div class="bg-[#072766] px-14  pt-30 text-white absolute top-29 w-130 left-40 ">
         <p class="text-6xl font-bold mb-8">{{ t('pages.careers.banner.title') }}</p>
         <p class="text-4xl opacity-60">{{ t('pages.careers.banner.title1') }}</p>
         <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-18"></div>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="relative">
-      <div class="pl-60 pt-80">
+      <div class="pl-50 pt-80">
         <p class="text-[#072867] text-2xl w-102">{{ t('pages.careers.desc') }}</p>
         <div class="flex items-center gap-4 mt-13 mb-30 cursor-pointer" @click="router.push('/careers/acquisition')">
           <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
