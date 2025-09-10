@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>腾讯地图加载器</title>
+    <title>百度地图加载器</title>
     <style>
         body, html {
             margin: 0;
@@ -18,55 +18,78 @@
 </head>
 <body>
     <div id="mapContainer"></div>
-    
-    <!-- 直接加载腾讯地图-->
-    <script src="https://map.qq.com/api/js?v=2.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
-    
+
+    <!-- 直接加载百度地图-->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=aRVvjOUyolTRKLu5f9cHzshCvTRKQNT2&callback=baiduMapReady"></script>
+
     <script>
+        var mapConfig = null;
+
+        // 百度地图API加载完成回调
+        function baiduMapReady() {
+            console.log('百度地图API加载完成');
+
+            // 如果已经有配置在等待，立即初始化地图
+            if (mapConfig) {
+                initBaiduMap(mapConfig);
+            }
+
+            // 通知父窗口API已准备就绪
+            window.parent.postMessage({
+                type: 'apiReady'
+            }, '*');
+        }
+
         // 等待来自父窗口的配置
         window.addEventListener('message', function(event) {
             if (event.data && event.data.type === 'initMap') {
-                initTencentMap(event.data.config);
+                console.log('收到地图配置:', event.data.config);
+                mapConfig = event.data.config;
+
+                // 如果API已经准备好，立即初始化地图
+                if (window.BMap && window.BMap.Map) {
+                    initBaiduMap(mapConfig);
+                } else {
+                    console.log('等待百度地图API加载完成...');
+                }
             }
         });
 
-        function initTencentMap(config) {
+        function initBaiduMap(config) {
             try {
-           
-                
-                // 创建地图
-                var map = new qq.maps.Map(document.getElementById('mapContainer'), {
-                    center: new qq.maps.LatLng(config.latitude, config.longitude),
-                    zoom: config.zoom || 16,
-                    mapTypeId: qq.maps.MapTypeId.ROADMAP
-                });
+                console.log('正在初始化百度地图，配置:', config);
+
+                // 创建地图实例
+                var map = new BMap.Map(document.getElementById('mapContainer'));
+
+                // 设置地图中心点和缩放级别
+                var point = new BMap.Point(config.longitude, config.latitude);
+                map.centerAndZoom(point, config.zoom || 16);
+
+                // 启用滚轮缩放
+                map.enableScrollWheelZoom(true);
+                map.enableKeyboard(true);
+                map.enableDragging(true);
 
                 // 添加标记点
-                var marker = new qq.maps.Marker({
-                    position: new qq.maps.LatLng(config.latitude, config.longitude),
-                    map: map
-                });
+                var marker = new BMap.Marker(point);
+                map.addOverlay(marker);
+
+                // 创建信息窗口内容
+                var infoContent = '';
 
                 // 添加信息窗口
-                var infoWindow = new qq.maps.InfoWindow({
-                    map: map
+                var infoWindow = new BMap.InfoWindow(infoContent, {
+                   
+                    title: config.title || '位置信息'
                 });
 
-                infoWindow.setContent(
-                    '<div style="padding: 8px;">' +
-                    '<h4 style="margin: 0 0 4px 0; font-size: 14px; font-weight: bold;">' + (config.title || '位置信息') + '</h4>' +
-                    '<p style="margin: 0; font-size: 12px; color: #666;">' + config.address + '</p>' +
-                    '</div>'
-                );
-
                 // 默认显示信息窗口
-                infoWindow.open();
-                infoWindow.setPosition(marker.getPosition());
-                
-                // 点击标记重新打开信息窗口（防止用户关闭后需要重新打开）
-                qq.maps.event.addListener(marker, 'click', function() {
-                    infoWindow.open();
-                    infoWindow.setPosition(marker.getPosition());
+                marker.openInfoWindow(infoWindow);
+
+                // // 点击标记重新打开信息窗口
+                marker.addEventListener('click', function() {
+                    marker.openInfoWindow(infoWindow);
                 });
 
                 // 通知父窗口地图加载完成
@@ -75,10 +98,8 @@
                     success: true
                 }, '*');
 
-                
-                
             } catch (error) {
-         
+                console.error('百度地图初始化失败:', error);
                 window.parent.postMessage({
                     type: 'mapReady',
                     success: false,
@@ -86,20 +107,6 @@
                 }, '*');
             }
         }
-
-        // 通知父窗口API已准备就绪
-        function checkAndNotifyReady() {
-            if (window.qq && window.qq.maps && window.qq.maps.Map) {
-                window.parent.postMessage({
-                    type: 'apiReady'
-                }, '*');
-            } else {
-                setTimeout(checkAndNotifyReady, 100);
-            }
-        }
-        
-        // 开始检查API是否就绪
-        checkAndNotifyReady();
     </script>
 </body>
 </html>

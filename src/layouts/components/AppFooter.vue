@@ -14,7 +14,7 @@
           <div class="flex gap-5 text-center text-[#0c2b57]">
             <div class="flex items-center justify-end gap-2">
               <div class="text-right">
-                <p class="text-[#A37B24] text-2xl">Fllow US</p>
+                <p class="text-[#A37B24] text-2xl">Fllow Us</p>
                 <p>{{ t(`footer.Follow2`) }}</p>
               </div>
               <img src="@/assets/images/footer/code1.png" alt="关注二维码" class="w-30   h-auto mb-2">

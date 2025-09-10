@@ -4,7 +4,7 @@
       <img src="@/assets/images/strategy/office/bg.png" alt="" srcset="" class="w-full">
       <div
         class=" absolute left-0 top-1/2 pr-60 -translate-y-1/2 pl-30 border-l-20 border-[#072867] h-42 flex flex-col justify-around">
-        <p class="text-[#9F8570] text-5xl">{{ t('pages.office.title2') }}</p>
+        <!-- <p class="text-[#9F8570] text-5xl">{{ t('pages.office.title2') }}</p> -->
         <p class="text-[#072867] text-7xl font-bold">{{ t('pages.office.title') }}</p>
       </div>
     </div>

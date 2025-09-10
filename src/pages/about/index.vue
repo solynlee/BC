@@ -2,15 +2,24 @@
   <div>
     <div class="relative">
       <img src="@/assets/images/about/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] px-14  pt-30 text-white absolute top-30 w-130 left-40">
-        <p class="text-6xl font-bold mb-4">{{ t('pages.about.banner.title') }}</p>
-        <p class="text-4xl opacity-60">{{ t('pages.about.banner.title1') }}</p>
-        <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-24"></div>
-        <p class="text-5xl font-bold mt-8 mb-30" :class="{ '!text-3xl  !leading-10': isEn }">{{
-          t('pages.about.banner.desc') }} <br />{{
-            t('pages.about.banner.desc3') }} <br />{{
-            t('pages.about.banner.desc2') }} <br />{{
-            t('pages.about.banner.desc4') }}</p>
+      <div class="bg-[#072766] px-10 text-white absolute top-29 w-[503px] left-38 ">
+        <div class="pt-30 h-77">
+          <p class="text-7xl font-bold mb-8">{{ t('pages.about.banner.title') }}</p>
+          <p class="text-4xl opacity-60">{{ t('pages.about.banner.title1') }}</p>
+        </div>
+        <div class="w-45 h-3 bg-[#9F8570] mb-15"></div>
+        <template v-if="isEn">
+          <p class="text-3xl font-bold mt-8 mb-25  leading-10">{{
+            t('pages.about.banner.desc') }} <br />{{
+              t('pages.about.banner.desc3') }} <br />{{
+              t('pages.about.banner.desc2') }} <br />{{
+              t('pages.about.banner.desc4') }}</p>
+        </template>
+        <template v-else>
+          <p class="text-5xl font-bold mt-8 mb-25 leading-18">{{
+            t('pages.about.banner.desc') }}<br />{{
+              t('pages.about.banner.desc2') }}</p>
+        </template>
       </div>
       <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-32 py-12">{{ t('pages.about.desc') }}</p>
     </div>

@@ -2,18 +2,20 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/strategy/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] pl-14 pr-20 pt-30 text-white absolute top-29 w-120 left-38 ">
-        <p class="text-6xl font-bold mb-8">{{ t('pages.strategy.banner.title') }}</p>
-        <p class="text-4xl opacity-60">{{ t('pages.strategy.banner.title1') }}</p>
-        <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-18"></div>
+      <div class="bg-[#072766] px-10  text-white absolute top-29 w-[503px] left-38 ">
+        <div class="pt-30 h-77">
+          <p class="text-7xl font-bold mb-8">{{ t('pages.strategy.banner.title') }}</p>
+          <p class="text-4xl opacity-60">{{ t('pages.strategy.banner.title1') }}</p>
+        </div>
+        <div class="w-45 h-3 bg-[#9F8570] mb-15"></div>
         <p class="text-4xl opacity-60">{{ t('pages.strategy.banner.desc') }}</p>
-        <p class="text-5xl font-bold mt-8 mb-25" :class="{ '!text-4xl !mt-20': isEn }">{{
+        <p class="text-5xl font-bold mt-8 mb-25" :class="{ '!text-4xl': isEn }">{{
           t('pages.strategy.banner.desc2') }}
         </p>
       </div>
     </div>
 
-    <div class="pl-180 text-[#0B2859] opacity-70 text-xl leading-9 py-16  -indent-5">
+    <div class="pl-180 text-[#0B2859] opacity-70 text-xl leading-9 py-12  -indent-5">
       <p>• &nbsp;{{ t('pages.strategy.desc.title1') }} </p>
       <p>• &nbsp;{{ t('pages.strategy.desc.title2') }} </p>
       <p>• &nbsp;{{ t('pages.strategy.desc.title3') }} </p>

@@ -2,18 +2,19 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/insights/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] px-14  pt-30 text-white absolute top-29 w-130 left-40 ">
-        <p class="text-5xl font-bold mb-4">{{ t('pages.insights.banner.title') }}</p>
-        <p class="text-3xl opacity-60">{{ t('pages.insights.banner.enTitle') }}</p>
-        <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-18"></div>
-
+      <div class="bg-[#072766] px-10 text-white absolute top-29 w-[503px] left-38 ">
+        <div class="pt-30 h-77">
+          <p class="text-7xl font-bold mb-8">{{ t('pages.insights.banner.title') }}</p>
+          <p class="text-4xl opacity-60">{{ t('pages.insights.banner.enTitle') }}</p>
+        </div>
+        <div class="w-45 h-3 bg-[#9F8570] mb-15"></div>
         <p class="text-5xl font-bold mt-8 mb-25 leading-18" :class="{ '!text-4xl  !leading-12 ': isEn }">{{
           t('pages.insights.banner.desc1') }}<br />{{
             t('pages.insights.banner.desc2') }}</p>
       </div>
     </div>
-    <div class="text-[#f1f5fa] pl-38 pr-20 pt-10 pb-20">
-      <div class="pl-160 pr-20 text-[#0B2859] text-xl opacity-70 leading-9">
+    <div class="text-[#f1f5fa] pl-38 pr-20 pt-12 pb-20">
+      <div class="pl-142 pr-20 text-[#0B2859] text-xl opacity-70 leading-9">
         {{ t('pages.insights.banner.desc3') }}
       </div>
       <div class="mt-28 ">

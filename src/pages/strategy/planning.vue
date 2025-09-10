@@ -4,8 +4,8 @@
       <img src="@/assets/images/strategy/planning/bg.png" alt="" srcset="" class="w-full">
       <div
         class=" absolute left-0 top-1/2 -translate-y-1/2 pl-30 border-l-20 border-[#072867] h-42 flex flex-col justify-around">
-
-        <p class="text-[#9F8570] text-5xl">{{ t('pages.planning.title2') }}</p>
+        <!-- 
+        <p class="text-[#9F8570] text-5xl">{{ t('pages.planning.title2') }}</p> -->
         <p class="text-[#072867] text-7xl font-bold">{{ t('pages.planning.title') }}</p>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <span class="text-[#072867] text-4xl font-bold">{{ t('pages.planning.Cases') }}</span>
       </div>
       <div class="p-4 ">
-        <img src="@/assets/images/strategy/planning/image2.png" alt="" srcset="" class="w-full">
+        <img :src="imageUrl2" alt="" srcset="" class="w-full">
       </div>
     </div>
 
@@ -50,6 +50,9 @@ const { t, locale } = useI18n()
 import image1 from '@/assets/images/strategy/planning/image1.png'
 import image3 from '@/assets/images/strategy/planning/image3.png'
 import image4 from '@/assets/images/strategy/planning/image4.png'
+import image5 from '@/assets/images/strategy/planning/image5.png'
+import image6 from '@/assets/images/strategy/planning/image6.png'
+import image7 from '@/assets/images/strategy/planning/image7.png'
 import { computed } from 'vue'
 const imageUrl1 = computed(() => {
   if (locale.value === 'zh-CN') {
@@ -61,6 +64,15 @@ const imageUrl1 = computed(() => {
   }
 })
 
+const imageUrl2 = computed(() => {
+  if (locale.value === 'zh-CN') {
+    return image5;
+  } else if (locale.value === 'zh-TW') {
+    return image6;
+  } else {
+    return image7;
+  }
+})
 </script>
 
 <style scoped></style>

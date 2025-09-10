@@ -2,19 +2,26 @@
   <section>
     <div class="relative">
       <img src="@/assets/images/careers/bg.png" alt="" srcset="" class="w-full">
-      <div class="bg-[#072766] px-14  pt-30 text-white absolute top-29 w-130 left-40 ">
-        <p class="text-6xl font-bold mb-8">{{ t('pages.careers.banner.title') }}</p>
-        <p class="text-4xl opacity-60">{{ t('pages.careers.banner.title1') }}</p>
-        <div class="w-45 h-3 bg-[#9F8570] mb-10 mt-18"></div>
-        <p class="text-4xl font-bold ">{{ t('pages.careers.banner.desc') }}</p>
-        <p class="text-4xl font-bold leading-12 mt-8 mb-12">{{ t('pages.careers.banner.desc2') }} <br />{{
-          t('pages.careers.banner.desc3') }}</p>
+      <div class="bg-[#072766] px-10 text-white absolute top-29 w-[503px] left-38 ">
+        <div class="pt-30 h-77">
+          <p class="text-7xl font-bold mb-8">{{ t('pages.careers.banner.title') }}</p>
+          <p class="text-4xl opacity-60">{{ t('pages.careers.banner.title1') }}</p>
+        </div>
+        <div class="w-45 h-3 bg-[#9F8570] mb-8"></div>
+        <p class="text-5xl font-bold" :class="{ '!text-4xl !leading-11': isEn }">{{ t('pages.careers.banner.desc') }}
+        </p>
+        <p class="text-5xl font-bold mt-4 mb-25 leading-18 pr-10" :class="{ '!text-4xl !leading-11': isEn }">{{
+          t('pages.careers.banner.desc2') }}
+          <br />{{
+            t('pages.careers.banner.desc3') }}
+        </p>
+
       </div>
     </div>
     <div class="relative">
-      <div class="pl-50 pt-80">
+      <div class="pl-50  pt-60 h-180">
         <p class="text-[#072867] text-2xl w-102">{{ t('pages.careers.desc') }}</p>
-        <div class="flex items-center gap-4 mt-13 mb-30 cursor-pointer" @click="router.push('/careers/acquisition')">
+        <div class="flex items-center gap-4 mt-10 cursor-pointer" @click="router.push('/careers/acquisition')">
           <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
             <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -60,9 +67,11 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-const { t } = useI18n()
+const { t, locale } = useI18n()
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
+import { computed } from 'vue'
+const isEn = computed(() => locale.value === 'en')
 const router = useRouter()
 interface Job {
   id: string,
