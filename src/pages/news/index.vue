@@ -73,18 +73,18 @@
             </div>
           </div>
         </div>
-        <div class="my-30">
+        <div class="mt-20">
           <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
             <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title3') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list2" :key="value.id">
+          <div class="mt-28 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list2" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
                 <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
+                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"
@@ -103,18 +103,18 @@
           </div>
 
         </div>
-        <div class="my-30">
+        <div class="my-20">
           <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
             <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title4') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list3" :key="value.id">
+          <div class="mt-28 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list3" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
                 <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
+                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"
@@ -133,18 +133,18 @@
           </div>
 
         </div>
-        <div class="my-30">
+        <div class="mt-20">
           <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
             <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title5') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list4" :key="value.id">
+          <div class="mt-28 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list4" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
                 <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
+                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"
@@ -162,18 +162,18 @@
             </div>
           </div>
         </div>
-        <div class="my-30">
+        <div class="my-20">
           <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4">
             <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
             <span class="text-[#072867] text-4xl font-bold">{{ t('pages.news.title6') }}</span>
           </div>
-          <div class="mt-40 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list5" :key="value.id">
+          <div class="mt-28 bg-white pl-120 p-10 relative text-[text-[#072867]]" v-for="value in list5" :key="value.id">
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
                 <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2">{{ value.abstract }}</p>
+                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"

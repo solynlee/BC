@@ -37,9 +37,8 @@
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
-import PageWrapper from '@/components/PageWrapper.vue'
+
 import api from '@/utils/http'
-import Container from '@/components/Container.vue'
 const { t } = useI18n()
 const route = useRoute()
 

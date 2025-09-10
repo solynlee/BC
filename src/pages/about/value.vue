@@ -60,22 +60,26 @@
         <div class="w-37 h-88 bg-[#C1A894] absolute bottom-40 right-0 z-1"></div>
       </div>
       <template v-for="item in teamList1?.slice(1)" :key="item.id">
-        <div class="mt-10 bg-white pl-80  p-10 relative">
-          <img :src="item.conver" alt="" srcset="" class="absolute left-10 -top-10 w-60 h-auto">
-          <div class="flex justify-between  gap-10">
+        <div class="mt-28 bg-white pl-120 p-10 relative text-[text-[#072867]]">
+          <img :src="item.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
+          <div>
             <div>
-              <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
+              <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
               </p>
-              <p class="text-[#072867] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
+              <p class="opacity-60 text-2xl  h-16 line-clamp-2">{{ item.abstract }}</p>
             </div>
-            <div class="flex items-center gap-4 mt-8 cursor-pointer"
-              @click="router.push({ name: 'valueDetail', query: { code: item.articleCode } })">
-              <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
-                <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-4 mt-8 cursor-pointer"
+                @click="router.push({ name: 'valueDetail', query: { code: item.articleCode } })">
+                <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">
+                  <svg class="w-6 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+                <div class="text-[#334CA8] text-xl border-b border-[#334CA8]">{{ t('pages.home.product.btn')
+                }}</div>
               </div>
-
+              <p class="text-2xl opacity-60">{{ dayjs.unix(item.publishDate).format('YYYY-MM-DD') }}</p>
             </div>
           </div>
         </div>
@@ -93,7 +97,7 @@ import { useCustomApiWithAutoRefresh } from '@/utils/useAutoRefreshApi'
 import api from '@/utils/http'
 import { useRouter } from 'vue-router';
 const { t, locale } = useI18n()
-
+import dayjs from 'dayjs'
 const isEn = computed(() => locale.value === 'en')
 interface TeamItem {
   id: number
@@ -101,7 +105,8 @@ interface TeamItem {
   abstract: string
   conver: string
   content: string,
-  articleCode: string
+  articleCode: string,
+  publishDate: number
 }
 const router = useRouter()
 

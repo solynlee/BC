@@ -156,7 +156,7 @@
     max-width: 100% !important;
     height: auto !important;
     display: block !important;
-    /* margin: 10px auto !important; */
+    margin: 10px auto !important;
 }
 
 .rich-text-content table {

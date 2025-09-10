@@ -277,8 +277,9 @@ const navItems = [
     path: '/about',
     label: 'nav.about',
     children: [
-      { path: '/about/proposition', label: 'nav.proposition' },
       { path: '/about/team', label: 'nav.team' },
+      { path: '/about/proposition', label: 'nav.proposition' },
+
       { path: '/about/value', label: 'nav.value' },
       { path: '/about/licenses', label: 'nav.license' }
     ]

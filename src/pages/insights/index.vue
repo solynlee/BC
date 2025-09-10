@@ -41,13 +41,13 @@
           <div class="w-37 h-88 bg-[#C1A894] absolute bottom-40 right-0 z-1"></div>
         </div>
         <template v-for="item in teamList1?.slice(1)" :key="item.id">
-          <div class="mt-10 bg-white pl-80  p-10 relative">
+          <div class="mt-16 bg-white pl-80  p-10 relative">
             <img :src="item.conver" alt="" srcset="" class="absolute left-10 -top-10 w-60 h-auto">
             <div class="flex justify-between  gap-10">
               <div>
                 <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
                 </p>
-                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl h-16 line-clamp-2">{{ item.abstract }}</p>
               </div>
               <div class="flex items-center gap-4 mt-8 cursor-pointer"
                 @click="router.push({ name: 'insightsDetail', query: { code: item.articleCode } })">
@@ -90,13 +90,13 @@
             </div>
             <div class="w-37 h-88 bg-[#C1A894] absolute bottom-40 right-0 z-1"></div>
           </div>
-          <div class="mt-10 bg-white pl-80  p-10 relative" v-for="item in teamList2?.slice(1)" :key="item.id">
+          <div class="mt-16 bg-white pl-80  p-10 relative" v-for="item in teamList2?.slice(1)" :key="item.id">
             <img :src="item.conver" alt="" srcset="" class="absolute left-10 -top-10 w-60 h-auto">
             <div class="flex justify-between  gap-10">
               <div>
                 <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
                 </p>
-                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2">{{ item.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl h-16 line-clamp-2">{{ item.abstract }}</p>
               </div>
               <div class="flex items-center gap-4 mt-8 cursor-pointer"
                 @click="router.push({ name: 'insightsDetail', query: { code: item.articleCode } })">
