@@ -82,9 +82,9 @@
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
-                <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
+                <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"
@@ -112,9 +112,9 @@
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
-                <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
+                <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"
@@ -142,9 +142,9 @@
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
-                <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
+                <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"
@@ -171,9 +171,9 @@
             <img :src="value.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
             <div>
               <div>
-                <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
+                <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ value.title }}
                 </p>
-                <p class="opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
+                <p class="text-[#072867] opacity-60 text-2xl line-clamp-2 h-16">{{ value.abstract }}</p>
               </div>
               <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4 mt-8 cursor-pointer"

@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="relative">
-      <div class="pl-50  pt-60 h-180">
+      <div class="pl-50  pt-85 h-180" :class="{ '!pt-60': isEn }">
         <p class="text-[#072867] text-2xl w-102">{{ t('pages.careers.desc') }}</p>
         <div class="flex items-center gap-4 mt-10 cursor-pointer" @click="router.push('/careers/acquisition')">
           <div class="bg-[#334CA8] w-10 h-10 flex items-center justify-center rounded-full">

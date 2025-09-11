@@ -16,7 +16,7 @@
         </p>
 
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-180 text-2xl pr-30 py-12">{{ t('pages.contact.desc') }}</p>
+      <p class="text-[#0B2859] opacity-60 leading-9 pl-180 text-xl pr-30 py-12">{{ t('pages.contact.desc') }}</p>
     </div>
     <div class="px-38 ">
       <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 mt-20 ">

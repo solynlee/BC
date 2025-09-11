@@ -9,7 +9,7 @@
         </div>
         <div class="w-45 h-3 bg-[#9F8570] mb-15"></div>
         <p class="text-4xl opacity-60">{{ t('pages.strategy.banner.desc') }}</p>
-        <p class="text-5xl font-bold mt-8 mb-25" :class="{ '!text-4xl': isEn }">{{
+        <p class="text-5xl font-bold pr-10 mt-8 mb-25 leading-18" :class="{ '!text-4xl !leading-12 !pr-0': isEn }">{{
           t('pages.strategy.banner.desc2') }}
         </p>
       </div>

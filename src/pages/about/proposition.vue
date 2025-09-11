@@ -21,7 +21,7 @@
               t('pages.about.banner.desc2') }}</p>
         </template>
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-20 py-12">{{ t('pages.proposition.desc') }}</p>
+      <p class="text-[#0B2859] opacity-60 pl-180 leading-9 text-xl pr-20 py-12">{{ t('pages.proposition.desc') }}</p>
     </div>
     <div class="flex items-center justify-center gap-10 mt-20 text-3xl text-white text-center"
       :class="{ '!text-2xl': isEn }">
@@ -64,13 +64,13 @@
         </div>
         <div class="flex flex-col flex-1">
           <img :src="imageUrl2" alt="" srcset="" class="w-full h-auto">
-          <div class="py-6 pl-6 pr-8 border-l border-[#072766] flex-1">
+          <div class="py-6 pl-6 border-l border-[#072766] flex-1">
             <p>{{ t('pages.proposition.institutions.item2.desc1') }}</p>
           </div>
         </div>
         <div class="flex flex-col flex-1">
           <img :src="imageUrl3" alt="" srcset="" class="w-full h-auto">
-          <div class="py-6  pl-6 pr-8 border-l border-[#072766] flex-1">
+          <div class="py-6  pl-6  border-l border-[#072766] flex-1">
             <p>{{ t('pages.proposition.institutions.item3.desc1') }}</p>
           </div>
         </div>

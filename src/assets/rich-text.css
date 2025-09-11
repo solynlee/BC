@@ -20,6 +20,9 @@
     /* margin: 1em !important; */
     /* line-height: 1.6 !important; */
 }
+.rich-text-content p:empty {
+    min-height: 1.6rem;
+}
 
 .rich-text-content h1 {
     display: block !important;

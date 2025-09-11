@@ -21,7 +21,7 @@
               t('pages.about.banner.desc2') }}</p>
         </template>
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-32 py-12 "></p>
+      <p class="text-[#0B2859] opacity-60 pl-180 leading-9 text-xl pr-32 py-12 "></p>
     </div>
     <div class="flex items-center justify-center gap-10 mt-40 mb-20 text-3xl text-white text-center"
       :class="{ '!text-2xl': isEn }">
@@ -45,7 +45,7 @@
         {{ t('pages.about.tab.tab5') }}
       </p>
     </div>
-    <div class="px-38 pb-20">
+    <div class="px-34 pb-20">
       <table class="w-full border-collapse border border-[#b9a495] table-fixed">
         <colgroup>
           <col class="w-1/6">

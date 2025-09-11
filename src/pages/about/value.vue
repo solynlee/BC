@@ -21,7 +21,7 @@
               t('pages.about.banner.desc2') }}</p>
         </template>
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-20 py-12">{{ t('pages.value.desc') }}<br />{{
+      <p class="text-[#0B2859] opacity-60 pl-180  leading-9 text-xl pr-20 py-12">{{ t('pages.value.desc') }}<br />{{
         t('pages.value.desc2') }}</p>
     </div>
     <div class="flex items-center justify-center gap-10 mt-20 text-3xl text-white text-center"
@@ -73,9 +73,9 @@
           <img :src="item.conver" alt="" srcset="" class="absolute left-0 bottom-10 w-105 h-auto">
           <div>
             <div>
-              <p class=" font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
+              <p class="text-[#0B2859] font-bold text-3xl line-clamp-1 mb-8">{{ item.title }}
               </p>
-              <p class="opacity-60 text-2xl  h-16 line-clamp-2">{{ item.abstract }}</p>
+              <p class="text-[#072867] opacity-60 text-2xl line-clamp-2 h-16">{{ item.abstract }}</p>
             </div>
             <div class="flex justify-between items-center">
               <div class="flex items-center gap-4 mt-8 cursor-pointer"

@@ -21,7 +21,7 @@
               t('pages.about.banner.desc2') }}</p>
         </template>
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-20 py-12">{{ t('pages.team.desc') }}</p>
+      <p class="text-[#0B2859] opacity-60 pl-180 leading-9 text-xl pr-20 py-12">{{ t('pages.team.desc') }}</p>
     </div>
     <div class="flex items-center justify-center gap-10 mt-20 text-3xl text-white text-center"
       :class="{ '!text-2xl': isEn }">
@@ -50,8 +50,8 @@
         <img :src="teamList1?.[0].conver" alt="" srcset="" class="w-160 h-auto relative z-10">
         <div class="w-210 h-full bg-white shadow absolute right-0 -bottom-16 pl-60 pr-20 ">
           <div class="bg-[#345CAC] h-4 w-40"></div>
-          <p class="text-[#C1A894] font-bold text-5xl mt-20 mb-2">{{ teamList1?.[0].title }}</p>
-          <p class="text-[#C1A894] text-3xl mb-10" v-html="teamList1?.[0].abstract"></p>
+          <p class="text-[#C1A894] font-bold text-5xl mt-16 mb-2">{{ teamList1?.[0].title }}</p>
+          <p class="text-[#C1A894] text-3xl mb-8" v-html="teamList1?.[0].abstract"></p>
           <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="teamList1?.[0].content"></p>
 
         </div>
@@ -66,7 +66,7 @@
           <div class="bg-white shadow py-10 px-7 h-full flex flex-col ">
             <div class="text-[#C1A894] pl-72 mb-14 h-24">
               <p class="text-4xl font-bold">{{ item.title }}</p>
-              <p class="text-2xl mt-2 " style="white-space: nowrap;" v-html="item.abstract"></p>
+              <p class="text-2xl mt-2 " v-html="item.abstract"></p>
             </div>
             <div class="text-[#0E285C] text-xl pl-4 pr-4  flex-1 py-1 border-l-8 border-[#345CAC]">
               <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="item.content"></p>
@@ -80,17 +80,16 @@
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
         <span class="text-[#072867] text-4xl font-bold">{{ t('pages.team.manag') }}</span>
       </div>
-      <div class="px-4 mt-10 grid grid-cols-3 gap-8" v-if="teamList3">
-        <div class="pt-28 relative" v-for="item in teamList3" :key="item.id">
+      <div class="px-4 mt-10 grid grid-cols-3 gap-8" v-if="teamList3" style="grid-auto-rows: 1fr;">
+        <div class="pt-28 relative flex flex-col" v-for="item in teamList3" :key="item.id">
           <img :src="item.conver" alt="" srcset="" class="w-auto h-68 absolute top-0 left-1/2 -translate-x-1/2">
-          <div class="bg-white shadow pt-48 pb-10 px-7 h-full flex flex-col gap-6">
-            <div class="text-[#C1A894] text-center h-20">
-              <p class="text-3xl font-bold">{{ item.title }}</p>
-              <p class="text-2xl mt-2 " v-html="item.abstract"></p>
+          <div class="bg-white shadow pt-48 pb-10 px-4 flex flex-col gap-6 flex-1">
+            <div class="text-[#C1A894] text-center  h-20">
+              <p class="text-3xl  font-bold">{{ item.title }}</p>
+              <p class="text-2xl mt-2  leading-6" v-html="item.abstract"></p>
             </div>
-            <div class="text-[#0E285C] text-xl pl-4 pr-4 py-2  border-l-8 border-[#345CAC] flex-1">
+            <div class="text-[#0E285C] text-xl pl-6 pr-4 py-2  border-l-8 border-[#345CAC] flex-1">
               <p class="rich-text-content prose max-w-none text-[#0E285C]" v-html="item.content"></p>
-
             </div>
           </div>
         </div>

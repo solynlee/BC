@@ -20,14 +20,14 @@
         <span class="text-[#072867] text-4xl font-bold">{{ t('pages.careersDetail.jobCondition') }}</span>
       </div>
       <div class="text-base md:text-xl leading-relaxed tracking-widest px-10">
-        <div v-html="formatJobResponse(jobDetail?.jobResponse)" class="job-responsibilities"></div>
+        <div v-html="jobDetail?.jobResponse" class="job-responsibilities"></div>
       </div>
       <div class="flex items-center gap-6 border-b border-[#072867] pl-4 pb-4 my-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">
         <span class="text-[#072867] text-4xl font-bold">{{ t('pages.careersDetail.applyWay') }}</span>
       </div>
       <div class="text-base md:text-xl leading-relaxed tracking-widest px-10">
-        <div v-html="formatJobResponse(jobDetail?.jobCondition)" class="job-responsibilities  job-condition"></div>
+        <div v-html="jobDetail?.jobCondition" class="job-responsibilities  job-condition"></div>
       </div>
     </div>
   </section>
@@ -71,56 +71,20 @@ const { data: jobDetail } = useCustomApiWithAutoRefresh<JobDetail>(async () => {
   return res as JobDetail
 })
 
-// 格式化职位描述，将 "- " 开头的项目转换为编号列表
-const formatJobResponse = (text: string | undefined): string => {
-  if (!text) return ''
-
-  // 将 \n 转换为真正的换行符
-  const normalizedText = text.replace(/\\n/g, '\n')
-
-  // 按行分割
-  const lines = normalizedText.split('\n')
-
-  let counter = 1
-  const formattedLines = lines.map(line => {
-    const trimmedLine = line.trim()
-
-    // 跳过空行
-    if (!trimmedLine) {
-      return ''
-    }
-
-    // 如果是以 "- " 开头的行，转换为编号
-    if (trimmedLine.startsWith('- ')) {
-      const content = trimmedLine.substring(2).trim() // 移除 "- " 并清理空格
-      return `<div style="margin-bottom: 0.5rem;">${counter++}. ${content}</div>`
-    }
-
-    // 其他行保持原样，用div包装保持格式
-    return `<div style="margin-bottom: 0.5rem;">${trimmedLine}</div>`
-  })
-
-  // 过滤掉空的div
-  return formattedLines.filter(line => line.trim() !== '').join('')
-}
 
 
 </script>
 
 <style scoped>
-/* 详情页样式 */
-.job-responsibilities {
-  line-height: 1.8;
-}
-
-/* 确保编号列表项之间有适当间距 */
 :deep(.job-responsibilities) {
-  /* 为每个编号项添加底部间距 */
-  line-height: 2;
-}
+  /* p {
+    min-height: 1.6rem;
+    line-height: 1.6rem !important;
+  } */
 
-/* 编号项样式 */
-:deep(.job-responsibilities br) {
-  margin-bottom: 0.5rem;
+  /* 专门处理空的p标签 */
+  p:empty {
+    min-height: 1.6rem;
+  }
 }
 </style>

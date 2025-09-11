@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="px-34 mb-30">
-      <div class="flex items-center gap-8">
+      <div class="flex  gap-8">
         <img src="@/assets/images/strategy/office/image.png" alt="" srcset="" class="w-200 h-124 -translate-y-20">
-        <p class="text-[#072867] text-2xl px-8 pb-20">{{ t('pages.office.desc') }}</p>
+        <p class="text-[#072867] text-2xl px-4 pt-30">{{ t('pages.office.desc') }}</p>
       </div>
       <div class="flex items-center gap-4 border-b border-[#072867] pl-4 pb-4 my-10 ">
         <img src="@/assets/images/home/rightArr.png" alt="" srcset="" class="w-10">

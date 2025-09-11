@@ -21,7 +21,7 @@
               t('pages.about.banner.desc2') }}</p>
         </template>
       </div>
-      <p class="text-[#0B2859] opacity-60 pl-180 text-xl pr-32 py-12">{{ t('pages.about.desc') }}</p>
+      <p class="text-[#0B2859]  opacity-60 pl-180 leading-9 text-xl pr-32 py-12">{{ t('pages.about.desc') }}</p>
     </div>
     <div class="flex items-center justify-center gap-10 mt-20 text-3xl text-white text-center"
       :class="{ '!text-2xl': isEn }">
